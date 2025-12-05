@@ -25,7 +25,7 @@
         <whatweb>true</whatweb>                        <!-- whatweb sur ports HTTP détectés -->
 
         <!-- Topologie réseau -->
-        <enable_topology>false</enable_topology>       <!-- Nécessite networkx + traceroute -->
+        <enable_topology>true</enable_topology>       <!-- Nécessite networkx + traceroute -->
         <topology_only>false</topology_only>           <!-- True = découverte basique + topologie uniquement -->
 
         <!-- Logs -->
