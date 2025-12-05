@@ -2,12 +2,12 @@
 <config>
     <!-- Réseaux à scanner (notation CIDR) -->
     <networks>
-        <!-- <network>10.0.10.0/24</network> -->
+        <network>10.0.10.0/24</network>
     </networks>
 
     <!-- Hôtes individuels à scanner -->
     <hosts>
-        <host>10.0.10.111</host>
+        <!-- <host>10.0.10.111</host> -->
         <!-- <host>192.168.1.200</host> -->
     </hosts>
 
@@ -26,6 +26,7 @@
 
         <!-- Topologie réseau -->
         <enable_topology>false</enable_topology>       <!-- Nécessite networkx + traceroute -->
+        <topology_only>false</topology_only>           <!-- True = découverte basique + topologie uniquement -->
 
         <!-- Logs -->
         <log_commands>true</log_commands>

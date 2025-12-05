@@ -1,0 +1,897 @@
+{
+  "generated_at": "2025-12-05T11:57:55.708508",
+  "scanner": "panoptis",
+  "hosts": [
+    "10.0.10.1",
+    "10.0.10.10",
+    "10.0.10.100",
+    "10.0.10.101",
+    "10.0.10.106",
+    "10.0.10.200",
+    "10.0.10.50",
+    "10.0.10.54",
+    "10.0.10.55",
+    "10.0.10.56"
+  ],
+  "paths": [
+    {
+      "host": "10.0.10.1",
+      "hops": []
+    },
+    {
+      "host": "10.0.10.10",
+      "hops": [
+        "10.0.10.10"
+      ]
+    },
+    {
+      "host": "10.0.10.100",
+      "hops": [
+        "10.0.10.100"
+      ]
+    },
+    {
+      "host": "10.0.10.101",
+      "hops": [
+        "10.0.1.1",
+        "10.0.10.101"
+      ]
+    },
+    {
+      "host": "10.0.10.106",
+      "hops": [
+        "10.0.10.106"
+      ]
+    },
+    {
+      "host": "10.0.10.200",
+      "hops": [
+        "10.0.1.1"
+      ]
+    },
+    {
+      "host": "10.0.10.50",
+      "hops": [
+        "10.0.1.1",
+        "10.0.10.50"
+      ]
+    },
+    {
+      "host": "10.0.10.54",
+      "hops": [
+        "10.0.1.1",
+        "10.0.10.54"
+      ]
+    },
+    {
+      "host": "10.0.10.55",
+      "hops": [
+        "10.0.10.55"
+      ]
+    },
+    {
+      "host": "10.0.10.56",
+      "hops": [
+        "10.0.1.1",
+        "10.0.10.56"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "scanner_local",
+      "label": "Scanner\npanoptis",
+      "group": "scanner",
+      "shape": "icon",
+      "title": "Noeud scanner (panoptis)",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf109",
+        "size": 40,
+        "color": "#f97316"
+      },
+      "node_type": "scanner",
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#f97316",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#f97316",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 0,
+      "fixed": true,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "10.0.10.0/24",
+      "label": "10.0.10.0/24",
+      "group": "network",
+      "shape": "icon",
+      "title": "R\u00e9seau d\u00e9clar\u00e9 10.0.10.0/24",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf0ac",
+        "size": 32,
+        "color": "#22d3ee"
+      },
+      "node_type": "network",
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#22d3ee",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#22d3ee",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 1,
+      "fixed": true,
+      "x": 220.0,
+      "y": 0.0
+    },
+    {
+      "id": "10.0.10.1",
+      "label": "10.0.10.1",
+      "group": "unknown",
+      "shape": "icon",
+      "title": "10.0.10.1",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf128",
+        "size": 28,
+        "color": "#94a3b8"
+      },
+      "node_type": "unknown",
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#94a3b8",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#94a3b8",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 3,
+      "fixed": true,
+      "x": 660.0,
+      "y": 0.0
+    },
+    {
+      "id": "10.0.10.10",
+      "label": "10.0.10.10",
+      "group": "gateway",
+      "shape": "icon",
+      "title": "Saut interm\u00e9diaire 10.0.10.10",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf6ff",
+        "size": 30,
+        "color": "#a78bfa"
+      },
+      "node_type": "gateway",
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 2,
+      "fixed": true,
+      "x": 440.0,
+      "y": 0.0
+    },
+    {
+      "id": "10.0.10.100",
+      "label": "10.0.10.100",
+      "group": "gateway",
+      "shape": "icon",
+      "title": "Saut interm\u00e9diaire 10.0.10.100",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf6ff",
+        "size": 30,
+        "color": "#a78bfa"
+      },
+      "node_type": "gateway",
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 2,
+      "fixed": true,
+      "x": 337.0595549723503,
+      "y": 282.82654826207727
+    },
+    {
+      "id": "10.0.10.101",
+      "label": "10.0.10.101",
+      "group": "gateway",
+      "shape": "icon",
+      "title": "Saut interm\u00e9diaire 10.0.10.101",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf6ff",
+        "size": 30,
+        "color": "#a78bfa"
+      },
+      "node_type": "gateway",
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 2,
+      "fixed": true,
+      "x": 76.40519817344938,
+      "y": 433.31541132537154
+    },
+    {
+      "id": "10.0.1.1",
+      "label": "10.0.1.1",
+      "group": "gateway",
+      "shape": "icon",
+      "title": "Saut interm\u00e9diaire 10.0.1.1",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf6ff",
+        "size": 30,
+        "color": "#a78bfa"
+      },
+      "node_type": "gateway",
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 2,
+      "fixed": true,
+      "x": -219.99999999999991,
+      "y": 381.05117766515303
+    },
+    {
+      "id": "10.0.10.106",
+      "label": "10.0.10.106",
+      "group": "gateway",
+      "shape": "icon",
+      "title": "Saut interm\u00e9diaire 10.0.10.106",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf6ff",
+        "size": 30,
+        "color": "#a78bfa"
+      },
+      "node_type": "gateway",
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 2,
+      "fixed": true,
+      "x": -413.46475314579965,
+      "y": 150.4888630632943
+    },
+    {
+      "id": "10.0.10.200",
+      "label": "10.0.10.200",
+      "group": "unknown",
+      "shape": "icon",
+      "title": "10.0.10.200",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf128",
+        "size": 28,
+        "color": "#94a3b8"
+      },
+      "node_type": "unknown",
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#94a3b8",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#94a3b8",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 3,
+      "fixed": true,
+      "x": -660.0,
+      "y": 8.082668874372531e-14
+    },
+    {
+      "id": "10.0.10.50",
+      "label": "10.0.10.50",
+      "group": "gateway",
+      "shape": "icon",
+      "title": "Saut interm\u00e9diaire 10.0.10.50",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf6ff",
+        "size": 30,
+        "color": "#a78bfa"
+      },
+      "node_type": "gateway",
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 2,
+      "fixed": true,
+      "x": -413.4647531457997,
+      "y": -150.48886306329422
+    },
+    {
+      "id": "10.0.10.54",
+      "label": "10.0.10.54",
+      "group": "gateway",
+      "shape": "icon",
+      "title": "Saut interm\u00e9diaire 10.0.10.54",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf6ff",
+        "size": 30,
+        "color": "#a78bfa"
+      },
+      "node_type": "gateway",
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 2,
+      "fixed": true,
+      "x": -220.0000000000002,
+      "y": -381.05117766515286
+    },
+    {
+      "id": "10.0.10.55",
+      "label": "10.0.10.55",
+      "group": "gateway",
+      "shape": "icon",
+      "title": "Saut interm\u00e9diaire 10.0.10.55",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf6ff",
+        "size": 30,
+        "color": "#a78bfa"
+      },
+      "node_type": "gateway",
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 2,
+      "fixed": true,
+      "x": 76.4051981734492,
+      "y": -433.3154113253716
+    },
+    {
+      "id": "10.0.10.56",
+      "label": "10.0.10.56",
+      "group": "gateway",
+      "shape": "icon",
+      "title": "Saut interm\u00e9diaire 10.0.10.56",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf6ff",
+        "size": 30,
+        "color": "#a78bfa"
+      },
+      "node_type": "gateway",
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 2,
+      "fixed": true,
+      "x": 337.0595549723502,
+      "y": -282.82654826207744
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_0",
+      "from": "scanner_local",
+      "to": "10.0.10.1"
+    },
+    {
+      "id": "edge_1",
+      "from": "scanner_local",
+      "to": "10.0.10.10"
+    },
+    {
+      "id": "edge_2",
+      "from": "scanner_local",
+      "to": "10.0.10.100"
+    },
+    {
+      "id": "edge_3",
+      "from": "scanner_local",
+      "to": "10.0.1.1"
+    },
+    {
+      "id": "edge_4",
+      "from": "scanner_local",
+      "to": "10.0.10.106"
+    },
+    {
+      "id": "edge_5",
+      "from": "scanner_local",
+      "to": "10.0.10.55"
+    },
+    {
+      "id": "edge_6",
+      "from": "10.0.10.0/24",
+      "to": "10.0.10.1"
+    },
+    {
+      "id": "edge_7",
+      "from": "10.0.10.0/24",
+      "to": "10.0.10.10"
+    },
+    {
+      "id": "edge_8",
+      "from": "10.0.10.0/24",
+      "to": "10.0.10.100"
+    },
+    {
+      "id": "edge_9",
+      "from": "10.0.10.0/24",
+      "to": "10.0.10.101"
+    },
+    {
+      "id": "edge_10",
+      "from": "10.0.10.0/24",
+      "to": "10.0.10.106"
+    },
+    {
+      "id": "edge_11",
+      "from": "10.0.10.0/24",
+      "to": "10.0.10.200"
+    },
+    {
+      "id": "edge_12",
+      "from": "10.0.10.0/24",
+      "to": "10.0.10.50"
+    },
+    {
+      "id": "edge_13",
+      "from": "10.0.10.0/24",
+      "to": "10.0.10.54"
+    },
+    {
+      "id": "edge_14",
+      "from": "10.0.10.0/24",
+      "to": "10.0.10.55"
+    },
+    {
+      "id": "edge_15",
+      "from": "10.0.10.0/24",
+      "to": "10.0.10.56"
+    },
+    {
+      "id": "edge_16",
+      "from": "10.0.10.10",
+      "to": "10.0.10.10"
+    },
+    {
+      "id": "edge_17",
+      "from": "10.0.10.100",
+      "to": "10.0.10.100"
+    },
+    {
+      "id": "edge_18",
+      "from": "10.0.10.101",
+      "to": "10.0.1.1"
+    },
+    {
+      "id": "edge_19",
+      "from": "10.0.10.101",
+      "to": "10.0.10.101"
+    },
+    {
+      "id": "edge_20",
+      "from": "10.0.1.1",
+      "to": "10.0.10.200"
+    },
+    {
+      "id": "edge_21",
+      "from": "10.0.1.1",
+      "to": "10.0.10.50"
+    },
+    {
+      "id": "edge_22",
+      "from": "10.0.1.1",
+      "to": "10.0.10.54"
+    },
+    {
+      "id": "edge_23",
+      "from": "10.0.1.1",
+      "to": "10.0.10.56"
+    },
+    {
+      "id": "edge_24",
+      "from": "10.0.10.106",
+      "to": "10.0.10.106"
+    },
+    {
+      "id": "edge_25",
+      "from": "10.0.10.50",
+      "to": "10.0.10.50"
+    },
+    {
+      "id": "edge_26",
+      "from": "10.0.10.54",
+      "to": "10.0.10.54"
+    },
+    {
+      "id": "edge_27",
+      "from": "10.0.10.55",
+      "to": "10.0.10.55"
+    },
+    {
+      "id": "edge_28",
+      "from": "10.0.10.56",
+      "to": "10.0.10.56"
+    }
+  ],
+  "node_types": {
+    "scanner": {
+      "display": "Scanner",
+      "shape": "icon",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf109",
+        "size": 40,
+        "color": "#f97316"
+      },
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#f97316",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#f97316",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 0
+    },
+    "network": {
+      "display": "R\u00e9seau",
+      "shape": "icon",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf0ac",
+        "size": 32,
+        "color": "#22d3ee"
+      },
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#22d3ee",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#22d3ee",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 1
+    },
+    "gateway": {
+      "display": "Passerelle",
+      "shape": "icon",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf6ff",
+        "size": 30,
+        "color": "#a78bfa"
+      },
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#a78bfa",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 2
+    },
+    "domain_controller": {
+      "display": "Contr\u00f4leur de domaine",
+      "shape": "icon",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf233",
+        "size": 34,
+        "color": "#fb7185"
+      },
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#fb7185",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#fb7185",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 3
+    },
+    "windows": {
+      "display": "H\u00f4te Windows",
+      "shape": "icon",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf17a",
+        "size": 32,
+        "color": "#38bdf8"
+      },
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#38bdf8",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#38bdf8",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 3
+    },
+    "linux": {
+      "display": "H\u00f4te Linux",
+      "shape": "icon",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf17c",
+        "size": 32,
+        "color": "#4ade80"
+      },
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#4ade80",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#4ade80",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 3
+    },
+    "web": {
+      "display": "Serveur Web",
+      "shape": "icon",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf0ac",
+        "size": 30,
+        "color": "#fbbf24"
+      },
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#fbbf24",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#fbbf24",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 3
+    },
+    "dns": {
+      "display": "Serveur DNS",
+      "shape": "icon",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf124",
+        "size": 30,
+        "color": "#f472b6"
+      },
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#f472b6",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#f472b6",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 3
+    },
+    "mail": {
+      "display": "Serveur Mail",
+      "shape": "icon",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf0e0",
+        "size": 30,
+        "color": "#60a5fa"
+      },
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#60a5fa",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#60a5fa",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 3
+    },
+    "database": {
+      "display": "Base de donn\u00e9es",
+      "shape": "icon",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf1c0",
+        "size": 30,
+        "color": "#34d399"
+      },
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#34d399",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#34d399",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 3
+    },
+    "host": {
+      "display": "H\u00f4te g\u00e9n\u00e9rique",
+      "shape": "icon",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf233",
+        "size": 28,
+        "color": "#f5f5f4"
+      },
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#f5f5f4",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#f5f5f4",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 3
+    },
+    "unknown": {
+      "display": "Inconnu",
+      "shape": "icon",
+      "icon": {
+        "face": "FontAwesome",
+        "code": "\uf128",
+        "size": 28,
+        "color": "#94a3b8"
+      },
+      "color": {
+        "border": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "highlight": {
+          "border": "#94a3b8",
+          "background": "rgba(255,255,255,0.06)"
+        },
+        "hover": {
+          "border": "#94a3b8",
+          "background": "rgba(255,255,255,0.08)"
+        }
+      },
+      "level": 3
+    }
+  }
+}
