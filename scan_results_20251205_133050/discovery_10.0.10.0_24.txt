@@ -1,0 +1,26 @@
+# Nmap 7.95 scan initiated Fri Dec  5 13:30:50 2025 as: /usr/lib/nmap/nmap -sn -oN scan_results_20251205_133050/discovery_10.0.10.0_24.txt 10.0.10.0/24
+Nmap scan report for 10.0.10.1
+Host is up (0.00080s latency).
+Nmap scan report for 10.0.10.10
+Host is up (0.0054s latency).
+Nmap scan report for 10.0.10.20
+Host is up (0.0020s latency).
+Nmap scan report for 10.0.10.50
+Host is up (0.0017s latency).
+Nmap scan report for 10.0.10.53
+Host is up (0.0013s latency).
+Nmap scan report for 10.0.10.54
+Host is up (0.0020s latency).
+Nmap scan report for 10.0.10.55
+Host is up (0.0013s latency).
+Nmap scan report for 10.0.10.56
+Host is up (0.0015s latency).
+Nmap scan report for 10.0.10.100
+Host is up (0.0014s latency).
+Nmap scan report for 10.0.10.101
+Host is up (0.0020s latency).
+Nmap scan report for 10.0.10.106
+Host is up (0.0051s latency).
+Nmap scan report for 10.0.10.200
+Host is up (0.0043s latency).
+# Nmap done at Fri Dec  5 13:30:58 2025 -- 256 IP addresses (12 hosts up) scanned in 8.27 seconds

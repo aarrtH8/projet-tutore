@@ -1,0 +1,98 @@
+# Nmap 7.95 scan initiated Fri Dec  5 13:36:01 2025 as: /usr/lib/nmap/nmap -p 22,111,8006 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.10_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.10_detailed_scan.txt 10.0.10.10
+Nmap scan report for 10.0.10.10
+Host is up (0.0013s latency).
+
+PORT     STATE SERVICE        VERSION
+22/tcp   open  ssh            OpenSSH 10.0p2 Debian 7 (protocol 2.0)
+111/tcp  open  rpcbind        2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|_  100000  3,4          111/udp6  rpcbind
+8006/tcp open  wpl-analytics?
+| fingerprint-strings: 
+|   HTTPOptions: 
+|     HTTP/1.0 501 method 'OPTIONS' not available
+|     Cache-Control: max-age=0
+|     Connection: close
+|     Date: Fri, 05 Dec 2025 12:36:11 GMT
+|     Pragma: no-cache
+|     Server: pve-api-daemon/3.0
+|     Expires: Fri, 05 Dec 2025 12:36:11 GMT
+|   Help, Kerberos, TerminalServerCookie: 
+|     HTTP/1.0 400 bad request
+|     Cache-Control: max-age=0
+|     Connection: close
+|     Date: Fri, 05 Dec 2025 12:36:26 GMT
+|     Pragma: no-cache
+|     Server: pve-api-daemon/3.0
+|     Content-Length: 11
+|     Expires: Fri, 05 Dec 2025 12:36:26 GMT
+|     request
+|   LDAPSearchReq, LPDString: 
+|     HTTP/1.0 400 bad request
+|     Cache-Control: max-age=0
+|     Connection: close
+|     Date: Fri, 05 Dec 2025 12:36:36 GMT
+|     Pragma: no-cache
+|     Server: pve-api-daemon/3.0
+|     Content-Length: 11
+|     Expires: Fri, 05 Dec 2025 12:36:36 GMT
+|     request
+|   RTSPRequest: 
+|     HTTP/1.0 400 bad request
+|     Cache-Control: max-age=0
+|     Connection: close
+|     Date: Fri, 05 Dec 2025 12:36:11 GMT
+|     Pragma: no-cache
+|     Server: pve-api-daemon/3.0
+|     Content-Length: 11
+|     Expires: Fri, 05 Dec 2025 12:36:11 GMT
+|_    request
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8006-TCP:V=7.95%I=7%D=12/5%Time=6932D1C6%P=aarch64-unknown-linux-gn
+SF:u%r(HTTPOptions,D7,"HTTP/1\.0\x20501\x20method\x20'OPTIONS'\x20not\x20a
+SF:vailable\r\nCache-Control:\x20max-age=0\r\nConnection:\x20close\r\nDate
+SF::\x20Fri,\x2005\x20Dec\x202025\x2012:36:11\x20GMT\r\nPragma:\x20no-cach
+SF:e\r\nServer:\x20pve-api-daemon/3\.0\r\nExpires:\x20Fri,\x2005\x20Dec\x2
+SF:02025\x2012:36:11\x20GMT\r\n\r\n")%r(RTSPRequest,E3,"HTTP/1\.0\x20400\x
+SF:20bad\x20request\r\nCache-Control:\x20max-age=0\r\nConnection:\x20close
+SF:\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2012:36:11\x20GMT\r\nPragma:\x2
+SF:0no-cache\r\nServer:\x20pve-api-daemon/3\.0\r\nContent-Length:\x2011\r\
+SF:nExpires:\x20Fri,\x2005\x20Dec\x202025\x2012:36:11\x20GMT\r\n\r\nbad\x2
+SF:0request")%r(Help,E3,"HTTP/1\.0\x20400\x20bad\x20request\r\nCache-Contr
+SF:ol:\x20max-age=0\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\
+SF:x202025\x2012:36:26\x20GMT\r\nPragma:\x20no-cache\r\nServer:\x20pve-api
+SF:-daemon/3\.0\r\nContent-Length:\x2011\r\nExpires:\x20Fri,\x2005\x20Dec\
+SF:x202025\x2012:36:26\x20GMT\r\n\r\nbad\x20request")%r(TerminalServerCook
+SF:ie,E3,"HTTP/1\.0\x20400\x20bad\x20request\r\nCache-Control:\x20max-age=
+SF:0\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2012:3
+SF:6:26\x20GMT\r\nPragma:\x20no-cache\r\nServer:\x20pve-api-daemon/3\.0\r\
+SF:nContent-Length:\x2011\r\nExpires:\x20Fri,\x2005\x20Dec\x202025\x2012:3
+SF:6:26\x20GMT\r\n\r\nbad\x20request")%r(Kerberos,E3,"HTTP/1\.0\x20400\x20
+SF:bad\x20request\r\nCache-Control:\x20max-age=0\r\nConnection:\x20close\r
+SF:\nDate:\x20Fri,\x2005\x20Dec\x202025\x2012:36:26\x20GMT\r\nPragma:\x20n
+SF:o-cache\r\nServer:\x20pve-api-daemon/3\.0\r\nContent-Length:\x2011\r\nE
+SF:xpires:\x20Fri,\x2005\x20Dec\x202025\x2012:36:26\x20GMT\r\n\r\nbad\x20r
+SF:equest")%r(LPDString,E3,"HTTP/1\.0\x20400\x20bad\x20request\r\nCache-Co
+SF:ntrol:\x20max-age=0\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20D
+SF:ec\x202025\x2012:36:36\x20GMT\r\nPragma:\x20no-cache\r\nServer:\x20pve-
+SF:api-daemon/3\.0\r\nContent-Length:\x2011\r\nExpires:\x20Fri,\x2005\x20D
+SF:ec\x202025\x2012:36:36\x20GMT\r\n\r\nbad\x20request")%r(LDAPSearchReq,E
+SF:3,"HTTP/1\.0\x20400\x20bad\x20request\r\nCache-Control:\x20max-age=0\r\
+SF:nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2012:36:36
+SF:\x20GMT\r\nPragma:\x20no-cache\r\nServer:\x20pve-api-daemon/3\.0\r\nCon
+SF:tent-Length:\x2011\r\nExpires:\x20Fri,\x2005\x20Dec\x202025\x2012:36:36
+SF:\x20GMT\r\n\r\nbad\x20request");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 4.X
+OS CPE: cpe:/o:linux:linux_kernel:4
+OS details: Linux 4.19 - 5.15
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec  5 13:37:45 2025 -- 1 IP address (1 host up) scanned in 105.25 seconds

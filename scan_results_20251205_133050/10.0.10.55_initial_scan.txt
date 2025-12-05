@@ -1,0 +1,22 @@
+# Nmap 7.95 scan initiated Fri Dec  5 14:27:33 2025 as: /usr/lib/nmap/nmap -p- --open -oN scan_results_20251205_133050/10.0.10.55_initial_scan.txt 10.0.10.55
+Nmap scan report for 10.0.10.55
+Host is up (0.0011s latency).
+Not shown: 62857 closed tcp ports (reset), 2664 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+3389/tcp  open  ms-wbt-server
+5040/tcp  open  unknown
+7680/tcp  open  pando-pub
+49664/tcp open  unknown
+49665/tcp open  unknown
+49666/tcp open  unknown
+49670/tcp open  unknown
+49671/tcp open  unknown
+49672/tcp open  unknown
+49673/tcp open  unknown
+49717/tcp open  unknown
+
+# Nmap done at Fri Dec  5 14:38:31 2025 -- 1 IP address (1 host up) scanned in 658.11 seconds

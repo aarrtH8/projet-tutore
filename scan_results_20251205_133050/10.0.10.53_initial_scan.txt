@@ -1,0 +1,54 @@
+# Nmap 7.95 scan initiated Fri Dec  5 14:11:05 2025 as: /usr/lib/nmap/nmap -p- --open -oN scan_results_20251205_133050/10.0.10.53_initial_scan.txt 10.0.10.53
+Nmap scan report for 10.0.10.53
+Host is up (0.0012s latency).
+Not shown: 65486 closed tcp ports (reset), 3 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE
+111/tcp   open  rpcbind
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+1063/tcp  open  kyoceranetdev
+2049/tcp  open  nfs
+3389/tcp  open  ms-wbt-server
+5985/tcp  open  wsman
+6160/tcp  open  ecmp
+6161/tcp  open  patrol-ism
+6162/tcp  open  patrol-coll
+6169/tcp  open  unknown
+6170/tcp  open  unknown
+6172/tcp  open  unknown
+6190/tcp  open  unknown
+6210/tcp  open  unknown
+6290/tcp  open  unknown
+9380/tcp  open  boxp
+9381/tcp  open  unknown
+9392/tcp  open  unknown
+9393/tcp  open  unknown
+9396/tcp  open  fjinvmgr
+9401/tcp  open  sec-t4net-clt
+9402/tcp  open  sec-pc2fax-srv
+9403/tcp  open  unknown
+9501/tcp  open  unknown
+9509/tcp  open  unknown
+10001/tcp open  scp-config
+10002/tcp open  documentum
+10003/tcp open  documentum_s
+10005/tcp open  stel
+10006/tcp open  netapp-sync
+11731/tcp open  unknown
+20443/tcp open  unknown
+33034/tcp open  unknown
+47001/tcp open  winrm
+49664/tcp open  unknown
+49665/tcp open  unknown
+49666/tcp open  unknown
+49668/tcp open  unknown
+49669/tcp open  unknown
+49671/tcp open  unknown
+49672/tcp open  unknown
+49709/tcp open  unknown
+49710/tcp open  unknown
+50197/tcp open  unknown
+
+# Nmap done at Fri Dec  5 14:22:20 2025 -- 1 IP address (1 host up) scanned in 675.59 seconds

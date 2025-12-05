@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Fri Dec  5 14:27:19 2025 as: /usr/lib/nmap/nmap -p 21,22 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.54_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.54_detailed_scan.txt 10.0.10.54 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -p 21,22 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.54_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.54_detailed_scan.txt 10.0.10.54" start="1764941239" startstr="Fri Dec  5 14:27:19 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="21-22"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.0.10.54" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1764941240" endtime="1764941253"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.0.10.54" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="2.0.8 or later" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd</cpe></service><script id="ftp-anon" output="got code 500 &quot;OOPS: vsftpd: refusing to run with writable root inside chroot()&quot;."/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="10.0p2 Debian 7" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:10.0p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+<portused state="closed" proto="udp" portid="37209"/>
+<osmatch name="Linux 4.19 - 5.15" accuracy="100" line="70666">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="4256155" lastboot="Fri Oct 17 09:11:38 2025"/>
+<distance value="2"/>
+<tcpsequence index="260" difficulty="Good luck!" values="EAECC77A,A548D97,76B5E834,CC552C42,76A4CB64,58A01F9D"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="FDAFC100,FDAFC164,FDAFC1C8,FDAFC22C,FDAFC290,FDAFC2F4"/>
+<times srtt="1325" rttvar="313" to="100000"/>
+</host>
+<runstats><finished time="1764941253" timestr="Fri Dec  5 14:27:33 2025" summary="Nmap done at Fri Dec  5 14:27:33 2025; 1 IP address (1 host up) scanned in 15.01 seconds" elapsed="15.01" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

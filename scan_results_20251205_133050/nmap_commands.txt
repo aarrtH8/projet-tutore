@@ -1,0 +1,48 @@
+[2025-12-05 13:30:50] nmap -sn 10.0.10.0/24 -oN scan_results_20251205_133050/discovery_10.0.10.0_24.txt
+[2025-12-05 13:30:58] nmap -p- --open 10.0.10.1 -oN scan_results_20251205_133050/10.0.10.1_initial_scan.txt
+[2025-12-05 13:31:59] nmap -p 443,8080 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.1_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.1_detailed_scan.txt 10.0.10.1
+[2025-12-05 13:33:19] whatweb http://10.0.10.1:443
+[2025-12-05 13:33:28] whatweb http://10.0.10.1:8080
+[2025-12-05 13:33:38] nmap -p- --open 10.0.10.10 -oN scan_results_20251205_133050/10.0.10.10_initial_scan.txt
+[2025-12-05 13:36:00] nmap -p 22,111,8006 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.10_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.10_detailed_scan.txt 10.0.10.10
+[2025-12-05 13:37:46] nmap -p- --open 10.0.10.100 -oN scan_results_20251205_133050/10.0.10.100_initial_scan.txt
+[2025-12-05 13:38:48] nmap -p 22 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.100_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.100_detailed_scan.txt 10.0.10.100
+[2025-12-05 13:38:52] nmap -p- --open 10.0.10.101 -oN scan_results_20251205_133050/10.0.10.101_initial_scan.txt
+[2025-12-05 13:39:56] nmap -p 21,22,23,25,53,80,111,139,445,3306,5900 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.101_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.101_detailed_scan.txt 10.0.10.101
+[2025-12-05 13:40:25] enum4linux -a 10.0.10.101
+[2025-12-05 13:40:57] whatweb http://10.0.10.101:80
+[2025-12-05 13:41:02] nmap -p- --open 10.0.10.106 -oN scan_results_20251205_133050/10.0.10.106_initial_scan.txt
+[2025-12-05 13:42:04] nmap -p 22 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.106_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.106_detailed_scan.txt 10.0.10.106
+[2025-12-05 13:42:08] nmap -p- --open 10.0.10.20 -oN scan_results_20251205_133050/10.0.10.20_initial_scan.txt
+[2025-12-05 13:43:11] nmap -p 22,111 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.20_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.20_detailed_scan.txt 10.0.10.20
+[2025-12-05 13:43:21] nmap -p- --open 10.0.10.200 -oN scan_results_20251205_133050/10.0.10.200_initial_scan.txt
+[2025-12-05 14:05:30] nmap -p 80,111,139,443,445,1058,2049,6160,6162,6169,6170,6185,6190,10443,19001,19004,33035 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.200_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.200_detailed_scan.txt 10.0.10.200
+[2025-12-05 14:07:51] enum4linux -a 10.0.10.200
+[2025-12-05 14:08:12] whatweb http://10.0.10.200:80
+[2025-12-05 14:08:21] whatweb http://10.0.10.200:443
+[2025-12-05 14:08:24] nmap -p- --open 10.0.10.50 -oN scan_results_20251205_133050/10.0.10.50_initial_scan.txt
+[2025-12-05 14:09:28] nmap -p 53,135,139,445,3389,49664,49682 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.50_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.50_detailed_scan.txt 10.0.10.50
+[2025-12-05 14:10:43] enum4linux -a 10.0.10.50
+[2025-12-05 14:11:05] nmap -p- --open 10.0.10.53 -oN scan_results_20251205_133050/10.0.10.53_initial_scan.txt
+[2025-12-05 14:22:20] nmap -p 111,135,139,445,1063,2049,3389,5985,6160,6161,6162,6169,6170,6172,6190,6210,6290,9380,9381,9392,9393,9396,9401,9402,9403,9501,9509,10001,10002,10003,10005,10006,11731,20443,33034,47001,49664,49665,49666,49668,49669,49671,49672,49709,49710,50197 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.53_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.53_detailed_scan.txt 10.0.10.53
+[2025-12-05 14:25:54] enum4linux -a 10.0.10.53
+[2025-12-05 14:26:15] nmap -p- --open 10.0.10.54 -oN scan_results_20251205_133050/10.0.10.54_initial_scan.txt
+[2025-12-05 14:27:18] nmap -p 21,22 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.54_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.54_detailed_scan.txt 10.0.10.54
+[2025-12-05 14:27:33] nmap -p- --open 10.0.10.55 -oN scan_results_20251205_133050/10.0.10.55_initial_scan.txt
+[2025-12-05 14:38:31] nmap -p 135,139,445,3389,5040,7680,49664,49665,49666,49670,49671,49672,49673,49717 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.55_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.55_detailed_scan.txt 10.0.10.55
+[2025-12-05 14:40:12] enum4linux -a 10.0.10.55
+[2025-12-05 14:40:33] nmap -p- --open 10.0.10.56 -oN scan_results_20251205_133050/10.0.10.56_initial_scan.txt
+[2025-12-05 14:42:55] nmap -p 135,139,445,3389,5040,49666,49672,49700 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.56_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.56_detailed_scan.txt 10.0.10.56
+[2025-12-05 14:44:32] enum4linux -a 10.0.10.56
+[2025-12-05 14:44:54] traceroute -n -w 1 -q 1 10.0.10.1
+[2025-12-05 14:44:54] traceroute -n -w 1 -q 1 10.0.10.10
+[2025-12-05 14:44:55] traceroute -n -w 1 -q 1 10.0.10.100
+[2025-12-05 14:44:55] traceroute -n -w 1 -q 1 10.0.10.101
+[2025-12-05 14:44:56] traceroute -n -w 1 -q 1 10.0.10.106
+[2025-12-05 14:44:56] traceroute -n -w 1 -q 1 10.0.10.20
+[2025-12-05 14:44:57] traceroute -n -w 1 -q 1 10.0.10.200
+[2025-12-05 14:44:59] traceroute -n -w 1 -q 1 10.0.10.50
+[2025-12-05 14:44:59] traceroute -n -w 1 -q 1 10.0.10.53
+[2025-12-05 14:44:59] traceroute -n -w 1 -q 1 10.0.10.54
+[2025-12-05 14:45:00] traceroute -n -w 1 -q 1 10.0.10.55
+[2025-12-05 14:45:00] traceroute -n -w 1 -q 1 10.0.10.56

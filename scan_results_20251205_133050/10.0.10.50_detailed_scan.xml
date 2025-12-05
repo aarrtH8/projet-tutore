@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Fri Dec  5 14:09:29 2025 as: /usr/lib/nmap/nmap -p 53,135,139,445,3389,49664,49682 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.50_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.50_detailed_scan.txt 10.0.10.50 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -p 53,135,139,445,3389,49664,49682 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.50_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.50_detailed_scan.txt 10.0.10.50" start="1764940169" startstr="Fri Dec  5 14:09:29 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="7" services="53,135,139,445,3389,49664,49682"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.0.10.50" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1764940170" endtime="1764940243"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.0.10.50" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="domain" product="Simple DNS Plus" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:jh_software:simple_dns_plus</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Windows Server 2016 Standard 14393 microsoft-ds" extrainfo="workgroup: PANOPTIS" hostname="SRV-AD" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-date" output="2025-12-05T13:10:22+00:00; -19s from scanner time."><elem key="date">2025-12-05T13:10:22+00:00</elem>
+<elem key="delta">-19.0</elem>
+</script><script id="rdp-ntlm-info" output="&#xa;  Target_Name: PANOPTIS&#xa;  NetBIOS_Domain_Name: PANOPTIS&#xa;  NetBIOS_Computer_Name: SRV-AD&#xa;  DNS_Domain_Name: panoptis.lan&#xa;  DNS_Computer_Name: SRV-AD.panoptis.lan&#xa;  DNS_Tree_Name: panoptis.lan&#xa;  Product_Version: 10.0.14393&#xa;  System_Time: 2025-12-05T13:10:13+00:00"><elem key="Target_Name">PANOPTIS</elem>
+<elem key="NetBIOS_Domain_Name">PANOPTIS</elem>
+<elem key="NetBIOS_Computer_Name">SRV-AD</elem>
+<elem key="DNS_Domain_Name">panoptis.lan</elem>
+<elem key="DNS_Computer_Name">SRV-AD.panoptis.lan</elem>
+<elem key="DNS_Tree_Name">panoptis.lan</elem>
+<elem key="Product_Version">10.0.14393</elem>
+<elem key="System_Time">2025-12-05T13:10:13+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=SRV-AD.panoptis.lan&#xa;Not valid before: 2025-10-31T21:41:23&#xa;Not valid after:  2026-05-02T21:41:23"><table key="subject">
+<elem key="commonName">SRV-AD.panoptis.lan</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">SRV-AD.panoptis.lan</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">DDE4848F511A115C5077E7476532E9A1A808F071E5B015196B6DF9CCAAA0E40240BF5F7C9F6586CE7A1D926B20B5F43426B3F2EEA5182478304D3446CC482E0511160A7616548B52DB03E79EB0F48AA184F3FF913D04BE885316A5FFD28306ABF8BFF6082453A18A0AD9A1469570EE416106092EB10636CF3A32D3943E6B329235C58B98EF084AE800721D2F85C5DBB5D4265F905B459E947B4AA5764AA6EC70622DD54E90861510A558037CEEF096EB1AF9E05C68CF247068E406C21F15C02DC7E6ADE4AB57BAE4B7617780A4CB23A29D393EF44142BFD7666399009641E4E06B9B76AAD0254F8DBD2689A002D13F3E8117B6CE82AF087E2F9E65D5FD26DD67</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-10-31T21:41:23</elem>
+<elem key="notAfter">2026-05-02T21:41:23</elem>
+</table>
+<elem key="md5">022fb90555bd2635961e5c0d52b79f27</elem>
+<elem key="sha1">2468933db2ac6e6fd4b2233a201be8ed46ef8398</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC6jCCAdKgAwIBAgIQGdQ+/9UWqpRMlQP8KfCExDANBgkqhkiG9w0BAQsFADAe&#xa;MRwwGgYDVQQDExNTUlYtQUQucGFub3B0aXMubGFuMB4XDTI1MTAzMTIxNDEyM1oX&#xa;DTI2MDUwMjIxNDEyM1owHjEcMBoGA1UEAxMTU1JWLUFELnBhbm9wdGlzLmxhbjCC&#xa;ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAN3khI9RGhFcUHfnR2Uy6aGo&#xa;CPBx5bAVGWtt+cyqoOQCQL9ffJ9lhs56HZJrILX0NCaz8u6lGCR4ME00RsxILgUR&#xa;Fgp2FlSLUtsD556w9IqhhPP/kT0EvohTFqX/0oMGq/i/9ggkU6GKCtmhRpVw7kFh&#xa;BgkusQY2zzoy05Q+azKSNcWLmO8ISugAch0vhcXbtdQmX5BbRZ6Ue0qldkqm7HBi&#xa;LdVOkIYVEKVYA3zu8JbrGvngXGjPJHBo5AbCHxXALcfmreSrV7rkt2F3gKTLI6Kd&#xa;OT70QUK/12ZjmQCWQeTga5t2qtAlT429JomgAtE/PoEXts6Crwh+L55l1f0m3WcC&#xa;AwEAAaMkMCIwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqG&#xa;SIb3DQEBCwUAA4IBAQBf0z5nERmEmnxTgIPdW+1YAj/KMObVPgCF+ha6EqQcfpvf&#xa;FJ3fjPGHZ0K7x/HheDONQVrZb9lNMeD1uEeWSuzcdc1Z1W0ppOgtTSPOzkTVPn7v&#xa;zZmAEyr407L2zZrbgBZSxt2QvGVJYJc4rS0asEsj+MQpPnlB/P9+0HMTxf+BlpXf&#xa;hW+da1tVpoIKyJBPUFMElkyGseLHXS0WIAGds6phmFdwb4v3UJ76zeztW1kHyq2O&#xa;X97kam62BYFef+GBcST5/rvZwQpmc9K1FEIq3ENwXqzMw22XbZY7EiuUh8P+S90+&#xa;C/3xA7n3droF3Lp9ELLWqM59uiw/ygJIrZPezCIu&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49682"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="53"/>
+<portused state="closed" proto="udp" portid="38152"/>
+<osmatch name="Microsoft Windows Server 2016" accuracy="99" line="81686">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2016" accuracy="99"><cpe>cpe:/o:microsoft:windows_server_2016</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10 1607" accuracy="95" line="74770">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="95"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 or Windows Server 2012 R2" accuracy="95" line="81123">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="95"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 R2" accuracy="95" line="81162">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="95"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2022" accuracy="94" line="82075">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2022" accuracy="94"><cpe>cpe:/o:microsoft:windows_server_2022</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7" accuracy="92" line="85665">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Vista" accuracy="92"><cpe>cpe:/o:microsoft:windows_vista::-</cpe><cpe>cpe:/o:microsoft:windows_vista::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="92"><cpe>cpe:/o:microsoft:windows_server_2008::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="92"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10 1511 - 1607" accuracy="92" line="74608">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="92"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 Professional" accuracy="92" line="82845">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="92"><cpe>cpe:/o:microsoft:windows_7::-:professional</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008" accuracy="91" line="85919">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Vista" accuracy="91"><cpe>cpe:/o:microsoft:windows_vista::sp2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 or Windows Server 2008 R2" accuracy="91" line="79935">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="1268302" lastboot="Thu Nov 20 21:52:21 2025"/>
+<distance value="2"/>
+<tcpsequence index="257" difficulty="Good luck!" values="876EF568,9D41047E,98311A58,DFD1D81A,5EB837B,FE76D805"/>
+<ipidsequence class="Incremental" values="7ED7,7ED8,7ED9,7EDA,7EDB,7EDC"/>
+<tcptssequence class="1000HZ" values="4B988BB6,4B988C1A,4B988C7E,4B988CE2,4B988D46,4B988DAA"/>
+<hostscript><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: required"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">required</elem>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)&#xa;  Computer name: SRV-AD&#xa;  NetBIOS computer name: SRV-AD\x00&#xa;  Domain name: panoptis.lan&#xa;  Forest name: panoptis.lan&#xa;  FQDN: SRV-AD.panoptis.lan&#xa;  System time: 2025-12-05T14:10:18+01:00&#xa;"><elem key="os">Windows Server 2016 Standard 14393</elem>
+<elem key="lanmanager">Windows Server 2016 Standard 6.3</elem>
+<elem key="server">SRV-AD\x00</elem>
+<elem key="date">2025-12-05T14:10:18+01:00</elem>
+<elem key="fqdn">SRV-AD.panoptis.lan</elem>
+<elem key="domain_dns">panoptis.lan</elem>
+<elem key="forest_dns">panoptis.lan</elem>
+<elem key="workgroup">PANOPTIS\x00</elem>
+</script><script id="smb2-security-mode" output="&#xa;  3:1:1: &#xa;    Message signing enabled and required"><table key="3:1:1">
+<elem>Message signing enabled and required</elem>
+</table>
+</script><script id="clock-skew" output="mean: -12m17s, deviation: 26m47s, median: -18s"><elem key="median">-18</elem>
+<elem key="mean">-737</elem>
+<elem key="count">5</elem>
+<elem key="stddev">1607</elem>
+</script><script id="smb2-time" output="&#xa;  date: 2025-12-05T13:10:14&#xa;  start_date: 2025-11-20T20:52:17"><elem key="date">2025-12-05T13:10:14</elem>
+<elem key="start_date">2025-11-20T20:52:17</elem>
+</script></hostscript><times srtt="1444" rttvar="209" to="100000"/>
+</host>
+<runstats><finished time="1764940243" timestr="Fri Dec  5 14:10:43 2025" summary="Nmap done at Fri Dec  5 14:10:43 2025; 1 IP address (1 host up) scanned in 75.07 seconds" elapsed="75.07" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

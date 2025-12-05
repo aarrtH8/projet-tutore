@@ -1,0 +1,52 @@
+# Nmap 7.95 scan initiated Fri Dec  5 14:38:32 2025 as: /usr/lib/nmap/nmap -p 135,139,445,3389,5040,7680,49664,49665,49666,49670,49671,49672,49673,49717 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.55_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.55_detailed_scan.txt 10.0.10.55
+Nmap scan report for 10.0.10.55
+Host is up (0.0014s latency).
+
+PORT      STATE SERVICE       VERSION
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds?
+3389/tcp  open  ms-wbt-server
+| ssl-cert: Subject: commonName=Poste-W11.panoptis.lan
+| Not valid before: 2025-11-06T09:44:20
+|_Not valid after:  2026-05-08T09:44:20
+| rdp-ntlm-info: 
+|   Target_Name: PANOPTIS
+|   NetBIOS_Domain_Name: PANOPTIS
+|   NetBIOS_Computer_Name: POSTE-W11
+|   DNS_Domain_Name: panoptis.lan
+|   DNS_Computer_Name: Poste-W11.panoptis.lan
+|   Product_Version: 10.0.26100
+|_  System_Time: 2025-12-05T13:39:45+00:00
+|_ssl-date: TLS randomness does not represent time
+5040/tcp  open  unknown
+7680/tcp  open  pando-pub?
+49664/tcp open  msrpc         Microsoft Windows RPC
+49665/tcp open  msrpc         Microsoft Windows RPC
+49666/tcp open  msrpc         Microsoft Windows RPC
+49670/tcp open  msrpc         Microsoft Windows RPC
+49671/tcp open  msrpc         Microsoft Windows RPC
+49672/tcp open  msrpc         Microsoft Windows RPC
+49673/tcp open  msrpc         Microsoft Windows RPC
+49717/tcp open  msrpc         Microsoft Windows RPC
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3389-TCP:V=7.95%I=7%D=12/5%Time=6932E065%P=aarch64-unknown-linux-gn
+SF:u%r(TerminalServerCookie,13,"\x03\0\0\x13\x0e\xd0\0\0\x124\0\x02\?\x08\
+SF:0\x02\0\0\0");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Microsoft Windows 11 21H2 (99%), Microsoft Windows 10 (96%), Microsoft Windows 10 1607 (96%), Microsoft Windows Server 2022 (95%), Microsoft Windows Server 2008 SP1 (93%), Microsoft Windows 10 1511 - 1607 (93%), Microsoft Windows 10 1703 (92%), Microsoft Windows 10 1511 (92%), Microsoft Windows 7 or Windows Server 2008 R2 (92%), Microsoft Windows Server 2008 R2 or Windows 8.1 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2025-12-05T13:39:45
+|_  start_date: N/A
+|_clock-skew: mean: -18s, deviation: 0s, median: -19s
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec  5 14:40:12 2025 -- 1 IP address (1 host up) scanned in 100.38 seconds

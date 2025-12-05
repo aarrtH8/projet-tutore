@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Fri Dec  5 14:22:21 2025 as: /usr/lib/nmap/nmap -p 111,135,139,445,1063,2049,3389,5985,6160,6161,6162,6169,6170,6172,6190,6210,6290,9380,9381,9392,9393,9396,9401,9402,9403,9501,9509,10001,10002,10003,10005,10006,11731,20443,33034,47001,49664,49665,49666,49668,49669,49671,49672,49709,49710,50197 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.53_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.53_detailed_scan.txt 10.0.10.53 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -p 111,135,139,445,1063,2049,3389,5985,6160,6161,6162,6169,6170,6172,6190,6210,6290,9380,9381,9392,9393,9396,9401,9402,9403,9501,9509,10001,10002,10003,10005,10006,11731,20443,33034,47001,49664,49665,49666,49668,49669,49671,49672,49709,49710,50197 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.53_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.53_detailed_scan.txt 10.0.10.53" start="1764940941" startstr="Fri Dec  5 14:22:21 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="46" services="111,135,139,445,1063,2049,3389,5985,6160-6162,6169-6170,6172,6190,6210,6290,9380-9381,9392-9393,9396,9401-9403,9501,9509,10001-10003,10005-10006,11731,20443,33034,47001,49664-49666,49668-49669,49671-49672,49709-49710,50197"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.0.10.53" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1764940942" endtime="1764941154"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.0.10.53" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="rpcbind" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="1063"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="rpcbind" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="2049"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="rpcbind" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-date" output="2025-12-05T13:25:29+00:00; -18s from scanner time."><elem key="delta">-18.0</elem>
+<elem key="date">2025-12-05T13:25:29+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=SRV-VEEAM.panoptis.lan&#xa;Not valid before: 2025-11-06T08:28:05&#xa;Not valid after:  2026-05-08T08:28:05"><table key="subject">
+<elem key="commonName">SRV-VEEAM.panoptis.lan</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">SRV-VEEAM.panoptis.lan</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">B7D43627ED3F96D6090B4169E33A1781F56D4909BFD3C3387017FC29481221ACA9D76223C0ECB3B9E87FA9EA130EECF894302834604038776E0BEC769A37C1877B700D05A180B9B9A6BF7E19CEEE27CFFD6AE7EBED14F31920A9F1C51892876DAD161B4EA90314F50640FAD28ADC74409737E626EFE831A122F668CE4064906EAAF1E550A2F69A70901CD8B2A9D4C201641BC161EDB4BC501F844BC3236A0662941271F70C24F79C7931054E0E34EE22C2276842DE0AB593B20F270983557B82ECD2611DFE17F077C2DF4C669C2216776ACDA6551CCA2B7C944410E91F9AAB4130BDC0F86BD81E9544290A769FC7347D48F9DDEFE1C81ED6DF4387FE24804FC1</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-11-06T08:28:05</elem>
+<elem key="notAfter">2026-05-08T08:28:05</elem>
+</table>
+<elem key="md5">9c80f82455ba2678815ef53ca87440e4</elem>
+<elem key="sha1">3e13e7da41e80d72fc60469bcc4f3797f2238015</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC8DCCAdigAwIBAgIQJDYrSD7AB79GtWVCQKhlcTANBgkqhkiG9w0BAQsFADAh&#xa;MR8wHQYDVQQDExZTUlYtVkVFQU0ucGFub3B0aXMubGFuMB4XDTI1MTEwNjA4Mjgw&#xa;NVoXDTI2MDUwODA4MjgwNVowITEfMB0GA1UEAxMWU1JWLVZFRUFNLnBhbm9wdGlz&#xa;LmxhbjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALfUNiftP5bWCQtB&#xa;aeM6F4H1bUkJv9PDOHAX/ClIEiGsqddiI8Dss7nof6nqEw7s+JQwKDRgQDh3bgvs&#xa;dpo3wYd7cA0FoYC5uaa/fhnO7ifP/Wrn6+0U8xkgqfHFGJKHba0WG06pAxT1BkD6&#xa;0orcdECXN+Ym7+gxoSL2aM5AZJBuqvHlUKL2mnCQHNiyqdTCAWQbwWHttLxQH4RL&#xa;wyNqBmKUEnH3DCT3nHkxBU4ONO4iwidoQt4KtZOyDycJg1V7guzSYR3+F/B3wt9M&#xa;ZpwiFndqzaZVHMorfJREEOkfmqtBML3A+GvYHpVEKQp2n8c0fUj53e/hyB7W30OH&#xa;/iSAT8ECAwEAAaMkMCIwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQw&#xa;MA0GCSqGSIb3DQEBCwUAA4IBAQCGZi1ZHSAa8Fj5XuWWvjhaXO+dOXToMpsQHYOg&#xa;qCDqJhBiG0axIEND3w/wqPleu5pL2OL8srSa8uABuhj7mqzlxQZQf/P8RRnk6moM&#xa;q0Sxwb0TKtFzUs99/6NZGr/L7UhSevLABcwnNRuNXhnmnXtQw+6H/58Sz8t3Eqrg&#xa;C4e5UxJhIvHwox4tVUsOCBztIoNJiWRXvsYWToNEuDyfuvVeDwx79V22u6voa4g4&#xa;W2bbrHSGwT4YS1Xb58MxApWmzEcItxKiMlmJzX1mspb885WmqBNTvZMCf6DayXJW&#xa;AtTBTe6W0tlDXGf03S1pTiRz5qMg74UxnMAExAgNTUt8GbUV&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="5985"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="6160"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="6161"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="6162"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="6169"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="6170"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="remoting" product="MS .NET Remoting services" method="probed" conf="10"><cpe>cpe:/a:microsoft:.net_framework</cpe></service></port>
+<port protocol="tcp" portid="6172"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="ssl-cert" output="Subject: commonName=SRV-VEEAM.panoptis.lan&#xa;Subject Alternative Name: DNS:SRV-VEEAM.panoptis.lan&#xa;Not valid before: 2025-11-07T09:53:39&#xa;Not valid after:  2035-11-05T09:53:39"><table key="subject">
+<elem key="commonName">SRV-VEEAM.panoptis.lan</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">SRV-VEEAM.panoptis.lan</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">9F7DD302305C931AE379F75854E4B7CE7D07CAE0898BEB31992569D9EB706F922FC48D0E1898AFA86D4DCCC6F552034E54AB36A47B97D891201AAEF09017CB17D4F70FF629D3D76625E6C04A575B90A4192DCD0D1BB21A14EB3284CC1F8C37729C7665C6D5991CD2E480A9966988BD880AE901343AE0E040F29D7A73DEF415B03D973E08B089DD5E2F40E2C409C438C126B936E3308197BF1781273B2B4398C3BB54A1C77AF6FB887F60900F570CD8A604E912DA825E571BD0DA76CC97BE93A23BEDA3F034713DAD27A11B59E9B6F72453A1BB79182CC8924C947B475DD293EEF4BA80BC6BEDB07EBF9FA5F833D1586E85BC512531F4EBD7DAA3B500E753C8A1</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:SRV-VEEAM.panoptis.lan</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-11-07T09:53:39</elem>
+<elem key="notAfter">2035-11-05T09:53:39</elem>
+</table>
+<elem key="md5">3ca676db8052fec2ea5ebb0041f888ee</elem>
+<elem key="sha1">c7e627b5eeb01bfa52cc75837deb4c094bcf2cb2</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC8TCCAdmgAwIBAgIQGGfIUIxca49Amxjm6E8ePzANBgkqhkiG9w0BAQsFADAh&#xa;MR8wHQYDVQQDExZTUlYtVkVFQU0ucGFub3B0aXMubGFuMB4XDTI1MTEwNzA5NTMz&#xa;OVoXDTM1MTEwNTA5NTMzOVowITEfMB0GA1UEAxMWU1JWLVZFRUFNLnBhbm9wdGlz&#xa;LmxhbjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJ990wIwXJMa43n3&#xa;WFTkt859B8rgiYvrMZkladnrcG+SL8SNDhiYr6htTczG9VIDTlSrNqR7l9iRIBqu&#xa;8JAXyxfU9w/2KdPXZiXmwEpXW5CkGS3NDRuyGhTrMoTMH4w3cpx2ZcbVmRzS5ICp&#xa;lmmIvYgK6QE0OuDgQPKdenPe9BWwPZc+CLCJ3V4vQOLECcQ4wSa5NuMwgZe/F4En&#xa;OytDmMO7VKHHevb7iH9gkA9XDNimBOkS2oJeVxvQ2nbMl76Tojvto/A0cT2tJ6Eb&#xa;Wem29yRTobt5GCzIkkyUe0dd0pPu9LqAvGvtsH6/n6X4M9FYboW8USUx9OvX2qO1&#xa;AOdTyKECAwEAAaMlMCMwIQYDVR0RBBowGIIWU1JWLVZFRUFNLnBhbm9wdGlzLmxh&#xa;bjANBgkqhkiG9w0BAQsFAAOCAQEAI4MHi3go9gXMYOqrnN6jByWfL9NaTAGk4Qe6&#xa;A9ztuYM72ieGBwlYmT29TR6LLTS0JjoOPquoC379saL8qGcoNUTr6rMXb+eMdM3j&#xa;+aOa/WEq5Ge96RvnIzI6260y49sqNEplWiVOiSue2RMgmdLpOwsMmffKcP9ISKfQ&#xa;YSMKH6P9jQsfJfBratgDNjf3sz5bj5hD6ZkpRGC2ENx2DlMPwMVEPSARiTwbGx8/&#xa;3sEdZdGS+ZdtL1imDIAH+b0Sn+uyOPANRtbjfoEtGGxMp5LogNL2g2Dt6DC+IX9B&#xa;qBSV0rxLb+XguPa6l/Nuh/PQRp+5dHQHWArjUf76WD/PnQTG1Q==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-title" output="Bad Request"><elem key="title">Bad Request</elem>
+</script></port>
+<port protocol="tcp" portid="6190"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="6210"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="6290"><state state="open" reason="syn-ack" reason_ttl="127"/></port>
+<port protocol="tcp" portid="9380"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msexchange-logcopier" product="Microsoft Exchange 2010 log copier" method="probed" conf="10"><cpe>cpe:/a:microsoft:exchange_server:2010</cpe></service></port>
+<port protocol="tcp" portid="9381"><state state="open" reason="syn-ack" reason_ttl="127"/></port>
+<port protocol="tcp" portid="9392"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="remoting" product="MS .NET Remoting services" method="probed" conf="10"><cpe>cpe:/a:microsoft:.net_framework</cpe></service></port>
+<port protocol="tcp" portid="9393"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="remoting" product="MS .NET Remoting services" method="probed" conf="10"><cpe>cpe:/a:microsoft:.net_framework</cpe></service></port>
+<port protocol="tcp" portid="9396"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="remoting" product="MS .NET Remoting services" method="probed" conf="10"><cpe>cpe:/a:microsoft:.net_framework</cpe></service></port>
+<port protocol="tcp" portid="9401"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="mc-nmf" product=".NET Message Framing" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="9402"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="sec-pc2fax-srv" method="table" conf="3"/></port>
+<port protocol="tcp" portid="9403"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="unknown" servicefp="SF-Port9403-TCP:V=7.95%T=SSL%I=7%D=12/5%Time=6932DCB5%P=aarch64-unknown-linux-gnu%r(HTTPOptions,91,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:22:43\x20GMT\r\nContent-Length:\x200\r\nStrict-Transport-Security:\x20max-age=2592000\r\n\r\n&quot;)%r(RTSPRequest,76,&quot;HTTP/1\.1\x20505\x20HTTP\x20Version\x20Not\x20Supported\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:22:43\x20GMT\r\nContent-Length:\x200\r\n\r\n&quot;)%r(Help,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:22:58\x20GMT\r\nContent-Length:\x200\r\n\r\n&quot;)%r(SSLSessionReq,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:22:58\x20GMT\r\nContent-Length:\x200\r\n\r\n&quot;)%r(TerminalServerCookie,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:22:58\x20GMT\r\nContent-Length:\x200\r\n\r\n&quot;)%r(TLSSessionReq,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:22:58\x20GMT\r\nContent-Length:\x200\r\n\r\n&quot;)%r(Kerberos,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:22:59\x20GMT\r\nContent-Length:\x200\r\n\r\n&quot;)%r(LPDString,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:23:09\x20GMT\r\nContent-Length:\x200\r\n\r\n&quot;)%r(SIPOptions,76,&quot;HTTP/1\.1\x20505\x20HTTP\x20Version\x20Not\x20Supported\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:23:14\x20GMT\r\nContent-Length:\x200\r\n\r\n&quot;);" tunnel="ssl" method="table" conf="3"/><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script><script id="ssl-date" output="2025-12-05T13:25:29+00:00; -18s from scanner time."><elem key="delta">-18.0</elem>
+<elem key="date">2025-12-05T13:25:29+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=Veeam Self Sign Certificate&#xa;Subject Alternative Name: IP Address:127.0.0.1, DNS:SRV-VEEAM.panoptis.lan&#xa;Not valid before: 2025-11-06T10:06:06&#xa;Not valid after:  2035-11-05T10:06:06"><table key="subject">
+<elem key="commonName">Veeam Self Sign Certificate</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">Veeam Self Sign Certificate</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">9D8A3C4D9028F2501AAA0306D9D844E1C4D168CBEB69E254B07CE34F298AA35436038B0371AF7E3C1B8B75573F2AE866BAD0CA27413AFC2B0B19C81C47655C3F556920DEFB417D10039B2F9F1A834F79B3B05D582C632C0E93C2B72E87D1E53C2A8EF858CF657BFB8C24936DF4D0057807FEB3BBCF06C7E125F4F65BE8F88181D3F23B240DDCFA4AB29513B7AB8179D2F8EA48174D512D04771CC0C5A4163AF7090D45C4C124C25799B62B1942E307BA017741B92C003B96CE05E6EB95C5149557AA333EEE9EBDE6B0D967719B45DC2EE31701E450B0A33128FA4C5756992B45D3434B3E5DC9C8CD878210F1FB49F6C891444EBE73D16230986AEC421FE1A14D</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE, pathlen:2</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">IP Address:127.0.0.1, DNS:SRV-VEEAM.panoptis.lan</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-11-06T10:06:06</elem>
+<elem key="notAfter">2035-11-05T10:06:06</elem>
+</table>
+<elem key="md5">e2ad210aa70aaf64afac610ea5a4e9c4</elem>
+<elem key="sha1">4f008938c4359600ede9a9f3c4a2b97078794c36</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDHzCCAgegAwIBAgIIfJNcHjq6fQYwDQYJKoZIhvcNAQELBQAwJjEkMCIGA1UE&#xa;AxMbVmVlYW0gU2VsZiBTaWduIENlcnRpZmljYXRlMB4XDTI1MTEwNjEwMDYwNloX&#xa;DTM1MTEwNTEwMDYwNlowJjEkMCIGA1UEAxMbVmVlYW0gU2VsZiBTaWduIENlcnRp&#xa;ZmljYXRlMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnYo8TZAo8lAa&#xa;qgMG2dhE4cTRaMvraeJUsHzjTymKo1Q2A4sDca9+PBuLdVc/KuhmutDKJ0E6/CsL&#xa;GcgcR2VcP1VpIN77QX0QA5svnxqDT3mzsF1YLGMsDpPCty6H0eU8Ko74WM9le/uM&#xa;JJNt9NAFeAf+s7vPBsfhJfT2W+j4gYHT8jskDdz6SrKVE7ergXnS+OpIF01RLQR3&#xa;HMDFpBY69wkNRcTBJMJXmbYrGULjB7oBd0G5LAA7ls4F5uuVxRSVV6ozPu6eveaw&#xa;2Wdxm0XcLuMXAeRQsKMxKPpMV1aZK0XTQ0s+XcnIzYeCEPH7SfbIkUROvnPRYjCY&#xa;auxCH+GhTQIDAQABo1EwTzAPBgNVHRMECDAGAQH/AgECMBMGA1UdJQQMMAoGCCsG&#xa;AQUFBwMBMCcGA1UdEQQgMB6HBH8AAAGCFlNSVi1WRUVBTS5wYW5vcHRpcy5sYW4w&#xa;DQYJKoZIhvcNAQELBQADggEBAI6LqOeLeIGcEVGUiamDCBcV2QIRIdI4x9SaLL6Z&#xa;WmKEnOeOtUfkQ6cxl+sO5m1sy74MzEKHsA8mJMFDB+Hd3piVJoAOlhCfHfVs6NMM&#xa;CCAItM8DcQ8KMUrbOMrazhy64ooDO7fDRmWdDEFxQVDyC5PBbbD3RpAPOSUM85iG&#xa;ldVT2RyAAZuqn/E0ilkAKj5SzqlfRSWuVILaa9fXKPFN7F2L6IKZwWauWjBq0S7+&#xa;sT8cbmfq1CKL1dQch90ugsmVG7A3wWCnvUBQPkasYehVO+o2VPCxCKfixS+1r939&#xa;nCDiMWYNmzQ+UY3KVHQUMbOOBRA+2EuHaVLV3xzaQngO0lU=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="fingerprint-strings" output="&#xa;  HTTPOptions: &#xa;    HTTP/1.1 404 Not Found&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:22:43 GMT&#xa;    Content-Length: 0&#xa;    Strict-Transport-Security: max-age=2592000&#xa;  Help, SSLSessionReq, TLSSessionReq, TerminalServerCookie: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:22:58 GMT&#xa;    Content-Length: 0&#xa;  Kerberos: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:22:59 GMT&#xa;    Content-Length: 0&#xa;  LPDString: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:23:09 GMT&#xa;    Content-Length: 0&#xa;  RTSPRequest: &#xa;    HTTP/1.1 505 HTTP Version Not Supported&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:22:43 GMT&#xa;    Content-Length: 0&#xa;  SIPOptions: &#xa;    HTTP/1.1 505 HTTP Version Not Supported&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:23:14 GMT&#xa;    Content-Length: 0"><elem key="HTTPOptions">&#xa;    HTTP/1.1 404 Not Found&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:22:43 GMT&#xa;    Content-Length: 0&#xa;    Strict-Transport-Security: max-age=2592000</elem>
+<elem key="Help, SSLSessionReq, TLSSessionReq, TerminalServerCookie">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:22:58 GMT&#xa;    Content-Length: 0</elem>
+<elem key="Kerberos">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:22:59 GMT&#xa;    Content-Length: 0</elem>
+<elem key="LPDString">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:23:09 GMT&#xa;    Content-Length: 0</elem>
+<elem key="RTSPRequest">&#xa;    HTTP/1.1 505 HTTP Version Not Supported&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:22:43 GMT&#xa;    Content-Length: 0</elem>
+<elem key="SIPOptions">&#xa;    HTTP/1.1 505 HTTP Version Not Supported&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:23:14 GMT&#xa;    Content-Length: 0</elem>
+</script></port>
+<port protocol="tcp" portid="9501"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="remoting" product="MS .NET Remoting services" method="probed" conf="10"><cpe>cpe:/a:microsoft:.net_framework</cpe></service></port>
+<port protocol="tcp" portid="9509"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="remoting" product="MS .NET Remoting services" method="probed" conf="10"><cpe>cpe:/a:microsoft:.net_framework</cpe></service></port>
+<port protocol="tcp" portid="10001"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msexchange-logcopier" product="Microsoft Exchange 2010 log copier" method="probed" conf="10"><cpe>cpe:/a:microsoft:exchange_server:2010</cpe></service></port>
+<port protocol="tcp" portid="10002"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msexchange-logcopier" product="Microsoft Exchange 2010 log copier" method="probed" conf="10"><cpe>cpe:/a:microsoft:exchange_server:2010</cpe></service></port>
+<port protocol="tcp" portid="10003"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="remoting" product="MS .NET Remoting services" method="probed" conf="10"><cpe>cpe:/a:microsoft:.net_framework</cpe></service></port>
+<port protocol="tcp" portid="10005"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="stel" method="table" conf="3"/></port>
+<port protocol="tcp" portid="10006"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netapp-sync" method="table" conf="3"/></port>
+<port protocol="tcp" portid="11731"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="20443"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft Kestrel httpd" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:microsoft:kestrel</cpe></service><script id="http-title" output="Site doesn&apos;t have a title (application/json)."></script><script id="http-server-header" output="Kestrel"><elem>Kestrel</elem>
+</script><script id="ssl-cert" output="Subject: commonName=SRV-VEEAM/organizationName=Veeam Software&#xa;Not valid before: 2025-11-06T10:05:56&#xa;Not valid after:  2035-11-06T10:05:56"><table key="subject">
+<elem key="commonName">SRV-VEEAM</elem>
+<elem key="organizationName">Veeam Software</elem>
+<elem key="organizationalUnitName">Veeam Software</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">SRV-VEEAM</elem>
+<elem key="organizationName">Veeam Software</elem>
+<elem key="organizationalUnitName">Veeam Software</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">4096</elem>
+<elem key="modulus">AB0E82E31653E657996ACA359870655D8712E96004305AE68330640740A2C9CF02A4A13D31D7A33950250B872E81AE70CB312CB3CD2CA61DCAF9F6E73CC3AB9D7CC05ECC53CADF385CD161AED49B245855C832E4F3CFF07E53A1025A97F66F5990476F139EC247CEB3C3B365DF87C22C49CBAD9144C4F5F50996DA37669B646DDCD478262248B4AEDFC019FACECE18415A7BF07D20EC7E48A6EC181AE19957E336407DFA01168AE1DE471843337689FD26C50BABC93AFC6B919772A32A635CC40964D1A9E1F0FF78EE8D24C2FB0F171E1CB9BE1C9703D295842A9393B619B9ED045F6A644E4396815DF356AEA1EDAFEE88095253B406F9DCE294EA17899F6B9E840E2C9DEAF90551F8E5DD60823F7BCA209B1CC9ECE4918A9EB8312B4381EA7B6F7487BB0AD2A0688C9874C6ED01ED8435C735CFD25B197B7390CF68683B5BC8CA2D8A2175E2E67E6DA30B77194AF2A196EE0475935F82E43063084CC3BD2FDC7F3C7DBF08B04182D5728062C0EC2C3260BC46D3D8A15A1D9CE82F4FF184328E639896E1A9363729DD462EB7719F6AE90E62D5391460C5DC0E3924F412B4F224BE76C9E9C80A03F2A1CF6DA87A17F239A8F6D867247CEE95FCAEC06792F2BF4C7E6C56BE39CD77935700CA7C0DD5CC3E4562274EA92E418823F52606C8524199A5C1CCA71B2E281F3D5B4AD1BFD6A9741D4E38DC42AE2E386A35D9F55A6D80E5</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+<elem key="critical">true</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-11-06T10:05:56</elem>
+<elem key="notAfter">2035-11-06T10:05:56</elem>
+</table>
+<elem key="md5">249ff3c7ae6da4eda4478920a3e7059f</elem>
+<elem key="sha1">f76de9a188ad761a31194e0000bff40283d18445</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFQDCCAyigAwIBAgIQE8EegY2+X4tMrM/Drsr61DANBgkqhkiG9w0BAQsFADBG&#xa;MRcwFQYDVQQLEw5WZWVhbSBTb2Z0d2FyZTEXMBUGA1UEChMOVmVlYW0gU29mdHdh&#xa;cmUxEjAQBgNVBAMTCVNSVi1WRUVBTTAeFw0yNTExMDYxMDA1NTZaFw0zNTExMDYx&#xa;MDA1NTZaMEYxFzAVBgNVBAsTDlZlZWFtIFNvZnR3YXJlMRcwFQYDVQQKEw5WZWVh&#xa;bSBTb2Z0d2FyZTESMBAGA1UEAxMJU1JWLVZFRUFNMIICIjANBgkqhkiG9w0BAQEF&#xa;AAOCAg8AMIICCgKCAgEAqw6C4xZT5leZaso1mHBlXYcS6WAEMFrmgzBkB0Ciyc8C&#xa;pKE9MdejOVAlC4cuga5wyzEss80sph3K+fbnPMOrnXzAXsxTyt84XNFhrtSbJFhV&#xa;yDLk88/wflOhAlqX9m9ZkEdvE57CR86zw7Nl34fCLEnLrZFExPX1CZbaN2abZG3c&#xa;1HgmIki0rt/AGfrOzhhBWnvwfSDsfkim7Bga4ZlX4zZAffoBForh3kcYQzN2if0m&#xa;xQuryTr8a5GXcqMqY1zECWTRqeHw/3jujSTC+w8XHhy5vhyXA9KVhCqTk7YZue0E&#xa;X2pkTkOWgV3zVq6h7a/uiAlSU7QG+dzilOoXiZ9rnoQOLJ3q+QVR+OXdYII/e8og&#xa;mxzJ7OSRip64MStDgep7b3SHuwrSoGiMmHTG7QHthDXHNc/SWxl7c5DPaGg7W8jK&#xa;LYohdeLmfm2jC3cZSvKhlu4EdZNfguQwYwhMw70v3H88fb8IsEGC1XKAYsDsLDJg&#xa;vEbT2KFaHZzoL0/xhDKOY5iW4ak2NyndRi63cZ9q6Q5i1TkUYMXcDjkk9BK08iS+&#xa;dsnpyAoD8qHPbah6F/I5qPbYZyR87pX8rsBnkvK/TH5sVr45zXeTVwDKfA3VzD5F&#xa;YidOqS5BiCP1JgbIUkGZpcHMpxsuKB89W0rRv9apdB1OONxCri44ajXZ9VptgOUC&#xa;AwEAAaMqMCgwDgYDVR0PAQH/BAQDAgeAMBYGA1UdJQEB/wQMMAoGCCsGAQUFBwMB&#xa;MA0GCSqGSIb3DQEBCwUAA4ICAQASQoZzs6O7srCqC3w1VkYBzUFZepYqIrQU2Kj+&#xa;ExcvQ7YdceLESzw9Mvav/L3gitwfd3tjqFtz1/Z6jKy3CP7NN4DKyfLnl8ZOz9XC&#xa;nSlx/kAvTBxa+WNhkmqx9VtvWHdIj/WqkfD//x6z2nR952HTI7OzcHL7TC84KGhb&#xa;sPo8QcKdFXCHkUejZaZ21IjU49f4hlhRcHQj3Bjzy9N7SWEfTe/PqNPoOqmWdZjb&#xa;kGvKJBNssom94fOMEhZRN/sIlcsL6AkmLZlB+iBjyzTtp28BTTUotCTRZGiTO+iA&#xa;ieCLuxV6GZBtzlprxIgNECoqQKBqO0Ic/bcVlvQU9s4opZnCRDFpNzrivZLZjh8U&#xa;sgcoMn2PO2AdVzg5C2/zhs/pJt5noFfN+NrXzke0Lse9xNHxg29qODqaiBQ64Ib7&#xa;2p/WZMhEmVTy0Ez8Zs7r68jnTK7QnEr844BZBfvjASDzYjEs6WLVB53DWuc+WNct&#xa;dBBSu4WyMkt+zz2FMdJRhx0hzhNqkvcAL7usQlEBXNbZGFjF2b4YEAdF/CBoYkaP&#xa;yMcLexeFsNr3UxHgngRghituu3x14y9GkxLGH7bOu7Aa/mLm5x4QUleFCjcQ5Ea2&#xa;3e7XsYnp0tZzUG5PZxMVjSDqYGjCcYEhFBsDrwxe0nmnXVflCuDeChSvp5fMH1kH&#xa;EroJHA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+<port protocol="tcp" portid="33034"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ssl-cert" output="Subject: commonName=Veeam Backup Server Certificate&#xa;Not valid before: 2025-11-06T10:05:05&#xa;Not valid after:  2035-11-06T10:05:05"><table key="subject">
+<elem key="commonName">Veeam Backup Server Certificate</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">Veeam Backup Server Certificate</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">B1EA63C06E20446ECD5008CE04B0F242F09F8E6ECBFA963E007DA90B90AA38448F730C7E4E41E91C7B45172BAB38E5C4E70C2CE8B4DAFA9B4C555A3F7788359B17271980DF0F2DEBCB268BCA8D64626456753C3E4B5D959F45D3FCC64AB2A9E2354D83C9E2A04ED3C4C292FC5108FDFD326953C38476C92744533CD519352F08D5D18035F1062A461D13EBFF052D0102C9C70E65DE1BCB897594BF895F41BBA82DAF793E73FAF5CBF3376C2A8F77A18AA7D94F7B3D05F55A4C4E117A6097C89B82E5262BD1ADC6879942277811507FA149D2138144CFBCB2602C1604EC6B1F0903FD3F424E06C13C97E95BEA91BA60097CE6F5795B38FAF8F6003A3591785E51</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE, pathlen:0</elem>
+<elem key="critical">true</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-11-06T10:05:05</elem>
+<elem key="notAfter">2035-11-06T10:05:05</elem>
+</table>
+<elem key="md5">6a52c5cd36cf20af9b40f61108456442</elem>
+<elem key="sha1">11fb088b1f00318d650fbf2aad390293411a24b9</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC9DCCAdygAwIBAgIQPdgUMQm1bKhGZAbkkqkeRzANBgkqhkiG9w0BAQsFADAq&#xa;MSgwJgYDVQQDEx9WZWVhbSBCYWNrdXAgU2VydmVyIENlcnRpZmljYXRlMB4XDTI1&#xa;MTEwNjEwMDUwNVoXDTM1MTEwNjEwMDUwNVowKjEoMCYGA1UEAxMfVmVlYW0gQmFj&#xa;a3VwIFNlcnZlciBDZXJ0aWZpY2F0ZTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC&#xa;AQoCggEBALHqY8BuIERuzVAIzgSw8kLwn45uy/qWPgB9qQuQqjhEj3MMfk5B6Rx7&#xa;RRcrqzjlxOcMLOi02vqbTFVaP3eINZsXJxmA3w8t68smi8qNZGJkVnU8PktdlZ9F&#xa;0/zGSrKp4jVNg8nioE7TxMKS/FEI/f0yaVPDhHbJJ0RTPNUZNS8I1dGANfEGKkYd&#xa;E+v/BS0BAsnHDmXeG8uJdZS/iV9Bu6gtr3k+c/r1y/M3bCqPd6GKp9lPez0F9VpM&#xa;ThF6YJfIm4LlJivRrcaHmUIneBFQf6FJ0hOBRM+8smAsFgTsax8JA/0/Qk4GwTyX&#xa;6VvqkbpgCXzm9XlbOPr49gA6NZF4XlECAwEAAaMWMBQwEgYDVR0TAQH/BAgwBgEB&#xa;/wIBADANBgkqhkiG9w0BAQsFAAOCAQEAYSV5XDSU4KC+2FMQnKuFEt8i/HW4K2QU&#xa;DMQrRm8Z+Nl8WB8XTj1WMQcR8G4Fn1Ti/2uwm+LZ4nt+hF+5zfeUG0YnSXYwLpBH&#xa;AfgZgolT49WEBOa5H4AVB9HTw9eqixXfu//ArTw6C1h+V7afV+gM6G8bIUqm/Y/2&#xa;Cq3GO36PfSv/GJUN6pMep6w65QS4iJsbWooo6/iF46q2nn8YOS9g61IqjHp3MvEO&#xa;QaKy5io1fuOcRiPLf0NBX3aLHZMiJPLrmS6t6et5swmlYH4Xo0B3TxKYNoNlCl2c&#xa;gNihVhCLYPHt5I558q/XodiR1+o4zm/dRK3DLpqQQoVk/Xg3sr2m0Q==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title."></script><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+<port protocol="tcp" portid="47001"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Not Found"><elem key="title">Not Found</elem>
+</script></port>
+<port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49665"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49668"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49669"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49671"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49672"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49709"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49710"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="50197"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-sql-s" product="Microsoft SQL Server 2016" version="13.00.5026.00; SP2" method="probed" conf="10"/><script id="ms-sql-info" output="&#xa;  10.0.10.53\VEEAMSQL2016: &#xa;    Instance name: VEEAMSQL2016&#xa;    Version: &#xa;      name: Microsoft SQL Server 2016 SP2&#xa;      number: 13.00.5026.00&#xa;      Product: Microsoft SQL Server 2016&#xa;      Service pack level: SP2&#xa;      Post-SP patches applied: false&#xa;    TCP port: 50197&#xa;    Named pipe: \\10.0.10.53\pipe\MSSQL$VEEAMSQL2016\sql\query&#xa;    Clustered: false"><table key="10.0.10.53\VEEAMSQL2016">
+<elem key="Instance name">VEEAMSQL2016</elem>
+<table key="Version">
+<elem key="name">Microsoft SQL Server 2016 SP2</elem>
+<elem key="number">13.00.5026.00</elem>
+<elem key="Product">Microsoft SQL Server 2016</elem>
+<elem key="Service pack level">SP2</elem>
+<elem key="Post-SP patches applied">false</elem>
+</table>
+<elem key="TCP port">50197</elem>
+<elem key="Named pipe">\\10.0.10.53\pipe\MSSQL$VEEAMSQL2016\sql\query</elem>
+<elem key="Clustered">false</elem>
+</table>
+</script><script id="ms-sql-ntlm-info" output="&#xa;  10.0.10.53\VEEAMSQL2016: &#xa;    Target_Name: PANOPTIS&#xa;    NetBIOS_Domain_Name: PANOPTIS&#xa;    NetBIOS_Computer_Name: SRV-VEEAM&#xa;    DNS_Domain_Name: panoptis.lan&#xa;    DNS_Computer_Name: SRV-VEEAM.panoptis.lan&#xa;    Product_Version: 10.0.20348"><table key="10.0.10.53\VEEAMSQL2016">
+<elem key="Target_Name">PANOPTIS</elem>
+<elem key="NetBIOS_Domain_Name">PANOPTIS</elem>
+<elem key="NetBIOS_Computer_Name">SRV-VEEAM</elem>
+<elem key="DNS_Domain_Name">panoptis.lan</elem>
+<elem key="DNS_Computer_Name">SRV-VEEAM.panoptis.lan</elem>
+<elem key="Product_Version">10.0.20348</elem>
+</table>
+</script><script id="ssl-date" output="2025-12-05T13:25:29+00:00; -19s from scanner time."><elem key="delta">-19.0</elem>
+<elem key="date">2025-12-05T13:25:29+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=SRV-VEEAM.panoptis.lan&#xa;Subject Alternative Name: DNS:SRV-VEEAM.panoptis.lan&#xa;Not valid before: 2025-11-07T09:53:39&#xa;Not valid after:  2035-11-05T09:53:39"><table key="subject">
+<elem key="commonName">SRV-VEEAM.panoptis.lan</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">SRV-VEEAM.panoptis.lan</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">9F7DD302305C931AE379F75854E4B7CE7D07CAE0898BEB31992569D9EB706F922FC48D0E1898AFA86D4DCCC6F552034E54AB36A47B97D891201AAEF09017CB17D4F70FF629D3D76625E6C04A575B90A4192DCD0D1BB21A14EB3284CC1F8C37729C7665C6D5991CD2E480A9966988BD880AE901343AE0E040F29D7A73DEF415B03D973E08B089DD5E2F40E2C409C438C126B936E3308197BF1781273B2B4398C3BB54A1C77AF6FB887F60900F570CD8A604E912DA825E571BD0DA76CC97BE93A23BEDA3F034713DAD27A11B59E9B6F72453A1BB79182CC8924C947B475DD293EEF4BA80BC6BEDB07EBF9FA5F833D1586E85BC512531F4EBD7DAA3B500E753C8A1</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:SRV-VEEAM.panoptis.lan</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-11-07T09:53:39</elem>
+<elem key="notAfter">2035-11-05T09:53:39</elem>
+</table>
+<elem key="md5">3ca676db8052fec2ea5ebb0041f888ee</elem>
+<elem key="sha1">c7e627b5eeb01bfa52cc75837deb4c094bcf2cb2</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC8TCCAdmgAwIBAgIQGGfIUIxca49Amxjm6E8ePzANBgkqhkiG9w0BAQsFADAh&#xa;MR8wHQYDVQQDExZTUlYtVkVFQU0ucGFub3B0aXMubGFuMB4XDTI1MTEwNzA5NTMz&#xa;OVoXDTM1MTEwNTA5NTMzOVowITEfMB0GA1UEAxMWU1JWLVZFRUFNLnBhbm9wdGlz&#xa;LmxhbjCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJ990wIwXJMa43n3&#xa;WFTkt859B8rgiYvrMZkladnrcG+SL8SNDhiYr6htTczG9VIDTlSrNqR7l9iRIBqu&#xa;8JAXyxfU9w/2KdPXZiXmwEpXW5CkGS3NDRuyGhTrMoTMH4w3cpx2ZcbVmRzS5ICp&#xa;lmmIvYgK6QE0OuDgQPKdenPe9BWwPZc+CLCJ3V4vQOLECcQ4wSa5NuMwgZe/F4En&#xa;OytDmMO7VKHHevb7iH9gkA9XDNimBOkS2oJeVxvQ2nbMl76Tojvto/A0cT2tJ6Eb&#xa;Wem29yRTobt5GCzIkkyUe0dd0pPu9LqAvGvtsH6/n6X4M9FYboW8USUx9OvX2qO1&#xa;AOdTyKECAwEAAaMlMCMwIQYDVR0RBBowGIIWU1JWLVZFRUFNLnBhbm9wdGlzLmxh&#xa;bjANBgkqhkiG9w0BAQsFAAOCAQEAI4MHi3go9gXMYOqrnN6jByWfL9NaTAGk4Qe6&#xa;A9ztuYM72ieGBwlYmT29TR6LLTS0JjoOPquoC379saL8qGcoNUTr6rMXb+eMdM3j&#xa;+aOa/WEq5Ge96RvnIzI6260y49sqNEplWiVOiSue2RMgmdLpOwsMmffKcP9ISKfQ&#xa;YSMKH6P9jQsfJfBratgDNjf3sz5bj5hD6ZkpRGC2ENx2DlMPwMVEPSARiTwbGx8/&#xa;3sEdZdGS+ZdtL1imDIAH+b0Sn+uyOPANRtbjfoEtGGxMp5LogNL2g2Dt6DC+IX9B&#xa;qBSV0rxLb+XguPa6l/Nuh/PQRp+5dHQHWArjUf76WD/PnQTG1Q==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="111"/>
+<portused state="closed" proto="udp" portid="40109"/>
+<osmatch name="Microsoft Windows Server 2022" accuracy="100" line="82075">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2022" accuracy="100"><cpe>cpe:/o:microsoft:windows_server_2022</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="19140" lastboot="Fri Dec  5 09:06:54 2025"/>
+<distance value="2"/>
+<tcpsequence index="260" difficulty="Good luck!" values="DB149D92,296480F8,EC00D9DB,A425A3C6,95A8A26B,C39AB6A"/>
+<ipidsequence class="Incremental" values="CBFE,CBFF,CC00,CC01,CC02,CC03"/>
+<tcptssequence class="1000HZ" values="1233BC7,1233C2B,1233C8F,1233CF3,1233D57,1233DBB"/>
+<hostscript><script id="smb2-security-mode" output="&#xa;  3:1:1: &#xa;    Message signing enabled but not required"><table key="3:1:1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="clock-skew" output="mean: -18s, deviation: 0s, median: -18s"><elem key="count">5</elem>
+<elem key="median">-18</elem>
+<elem key="mean">-18</elem>
+<elem key="stddev">0</elem>
+</script><script id="smb2-time" output="&#xa;  date: 2025-12-05T13:24:48&#xa;  start_date: N/A"><elem key="date">2025-12-05T13:24:48</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="3026" rttvar="3156" to="100000"/>
+</host>
+<runstats><finished time="1764941154" timestr="Fri Dec  5 14:25:54 2025" summary="Nmap done at Fri Dec  5 14:25:54 2025; 1 IP address (1 host up) scanned in 213.98 seconds" elapsed="213.98" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

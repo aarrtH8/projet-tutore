@@ -1,0 +1,129 @@
+# Nmap 7.95 scan initiated Fri Dec  5 14:05:30 2025 as: /usr/lib/nmap/nmap -p 80,111,139,443,445,1058,2049,6160,6162,6169,6170,6185,6190,10443,19001,19004,33035 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.200_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.200_detailed_scan.txt 10.0.10.200
+Nmap scan report for 10.0.10.200
+Host is up (0.0016s latency).
+
+PORT      STATE SERVICE      VERSION
+80/tcp    open  http         nginx 1.22.1
+|_http-server-header: nginx/1.22.1
+|_http-title: Did not follow redirect to https://10.0.10.200/
+111/tcp   open  rpcbind      2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100003  3           2049/tcp   nfs
+|   100003  3           2049/tcp6  nfs
+|   100005  3           1058/tcp   mountd
+|_  100005  3           1058/tcp6  mountd
+139/tcp   open  netbios-ssn  Samba smbd 4
+443/tcp   open  ssl/http     nginx
+|_http-title: Veeam Backup & Replication
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=Veeam-APP-1
+| Subject Alternative Name: IP Address:10.0.10.200, DNS:Veeam-APP-1
+| Not valid before: 2025-11-19T20:59:28
+|_Not valid after:  2035-11-19T20:59:28
+445/tcp   open  netbios-ssn  Samba smbd 4
+1058/tcp  open  mountd       3 (RPC #100005)
+2049/tcp  open  nfs          3 (RPC #100003)
+6160/tcp  open  ecmp?
+6162/tcp  open  patrol-coll?
+6169/tcp  open  tcpwrapped
+6170/tcp  open  ssl/unknown
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=vbr-5cc989ac/organizationName=Veeam
+| Subject Alternative Name: DNS:vbr-5cc989ac, DNS:vbr-5cc989ac
+| Not valid before: 2025-11-01T21:21:34
+|_Not valid after:  2035-11-02T21:21:34
+6185/tcp  open  tcpwrapped
+6190/tcp  open  unknown
+10443/tcp open  ssl/http     nginx
+| ssl-cert: Subject: commonName=Veeam-APP-1/organizationName=Veeam
+| Subject Alternative Name: DNS:Veeam-APP-1, DNS:Veeam-APP-1
+| Not valid before: 2025-11-19T20:59:04
+|_Not valid after:  2035-11-20T20:59:04
+|_http-title: Veeam Host Management
+|_ssl-date: TLS randomness does not represent time
+19001/tcp open  unknown
+19004/tcp open  unknown
+33035/tcp open  unknown
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Content-Length: 18
+|     Connection: close
+|     Date: Fri, 05 Dec 2025 13:06:07 GMT
+|     Resource not found
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 404 Not Found
+|     Content-Length: 18
+|     Connection: close
+|     Date: Fri, 05 Dec 2025 13:05:41 GMT
+|     Resource not found
+|   Help, Kerberos, SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Length: 0
+|     Connection: close
+|     Date: Fri, 05 Dec 2025 13:05:56 GMT
+|   LDAPSearchReq, LPDString: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Length: 0
+|     Connection: close
+|     Date: Fri, 05 Dec 2025 13:06:07 GMT
+|   RTSPRequest: 
+|     HTTP/1.1 505 HTTP Version Not Supported
+|     Content-Length: 0
+|     Connection: close
+|     Date: Fri, 05 Dec 2025 13:05:41 GMT
+|   SIPOptions: 
+|     HTTP/1.1 505 HTTP Version Not Supported
+|     Content-Length: 0
+|     Connection: close
+|_    Date: Fri, 05 Dec 2025 13:06:12 GMT
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port33035-TCP:V=7.95%I=7%D=12/5%Time=6932D8A7%P=aarch64-unknown-linux-g
+SF:nu%r(GetRequest,78,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:
+SF:\x2018\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2
+SF:013:05:41\x20GMT\r\n\r\nResource\x20not\x20found")%r(HTTPOptions,78,"HT
+SF:TP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x2018\r\nConnection:\
+SF:x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:05:41\x20GMT\r\n\r
+SF:\nResource\x20not\x20found")%r(RTSPRequest,76,"HTTP/1\.1\x20505\x20HTTP
+SF:\x20Version\x20Not\x20Supported\r\nContent-Length:\x200\r\nConnection:\
+SF:x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:05:41\x20GMT\r\n\r
+SF:\n")%r(Help,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x
+SF:200\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013
+SF::05:56\x20GMT\r\n\r\n")%r(SSLSessionReq,67,"HTTP/1\.1\x20400\x20Bad\x20
+SF:Request\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Fri
+SF:,\x2005\x20Dec\x202025\x2013:05:56\x20GMT\r\n\r\n")%r(TerminalServerCoo
+SF:kie,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nC
+SF:onnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:05:56\x
+SF:20GMT\r\n\r\n")%r(TLSSessionReq,67,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\
+SF:x20Dec\x202025\x2013:05:56\x20GMT\r\n\r\n")%r(Kerberos,67,"HTTP/1\.1\x2
+SF:0400\x20Bad\x20Request\r\nContent-Length:\x200\r\nConnection:\x20close\
+SF:r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:05:56\x20GMT\r\n\r\n")%r(Fo
+SF:urOhFourRequest,78,"HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:
+SF:\x2018\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2
+SF:013:06:07\x20GMT\r\n\r\nResource\x20not\x20found")%r(LPDString,67,"HTTP
+SF:/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nConnection:\x
+SF:20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:06:07\x20GMT\r\n\r\
+SF:n")%r(LDAPSearchReq,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-L
+SF:ength:\x200\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x2020
+SF:25\x2013:06:07\x20GMT\r\n\r\n")%r(SIPOptions,76,"HTTP/1\.1\x20505\x20HT
+SF:TP\x20Version\x20Not\x20Supported\r\nContent-Length:\x200\r\nConnection
+SF::\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:06:12\x20GMT\r\n
+SF:\r\n");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|router|firewall
+Running (JUST GUESSING): Linux 4.X|5.X|2.6.X|3.X (97%), MikroTik RouterOS 7.X (91%), IPFire 2.X (90%)
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5 cpe:/o:mikrotik:routeros:7 cpe:/o:linux:linux_kernel:5.6.3 cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:ipfire:ipfire:2.27 cpe:/o:linux:linux_kernel:6.1 cpe:/o:linux:linux_kernel:3.10
+Aggressive OS guesses: Linux 4.19 - 5.15 (97%), Linux 4.15 - 5.19 (91%), Linux 4.19 (91%), Linux 5.0 - 5.14 (91%), OpenWrt 21.02 (Linux 5.4) (91%), MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3) (91%), Linux 2.6.32 (90%), Linux 4.0 - 4.4 (90%), Linux 4.15 (90%), IPFire 2.27 (Linux 5.15 - 6.1) (90%)
+No exact OS matches for host (test conditions non-ideal).
+
+Host script results:
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec  5 14:07:51 2025 -- 1 IP address (1 host up) scanned in 141.04 seconds

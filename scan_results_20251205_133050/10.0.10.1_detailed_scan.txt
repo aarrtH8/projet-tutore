@@ -1,0 +1,207 @@
+# Nmap 7.95 scan initiated Fri Dec  5 13:32:00 2025 as: /usr/lib/nmap/nmap -p 443,8080 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.1_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.1_detailed_scan.txt 10.0.10.1
+Nmap scan report for 10.0.10.1
+Host is up (0.00074s latency).
+
+PORT     STATE SERVICE        VERSION
+443/tcp  open  ssl/https
+|_http-title: 404 Not Found
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=Fireware web CA/organizationName=WatchGuard
+| Not valid before: 2025-08-22T18:21:59
+|_Not valid after:  2035-09-19T18:21:59
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Fri, 05 Dec 2025 12:32:23 GMT
+|     Content-Type: text/html
+|     Content-Length: 138
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Fri, 05 Dec 2025 12:32:15 GMT
+|     Content-Type: text/html
+|     Content-Length: 134
+|     Connection: close
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body bgcolor="white">
+|     <center><h1>404 Not Found</h1></center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 404 Not Found
+|     Date: Fri, 05 Dec 2025 12:32:14 GMT
+|     Content-Type: text/html
+|     Content-Length: 134
+|     Connection: close
+|     <html>
+|     <head><title>404 Not Found</title></head>
+|     <body bgcolor="white">
+|     <center><h1>404 Not Found</h1></center>
+|     </body>
+|     </html>
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Fri, 05 Dec 2025 12:32:22 GMT
+|     Content-Type: text/html
+|     Content-Length: 138
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   tor-versions: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Fri, 05 Dec 2025 12:32:16 GMT
+|     Content-Type: text/html
+|     Content-Length: 138
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|_    </html>
+8080/tcp open  ssl/http-proxy none
+|_http-title: Did not follow redirect to https://10.0.10.1:8080/
+| ssl-cert: Subject: commonName=Fireware web CA/organizationName=WatchGuard
+| Not valid before: 2025-08-22T18:21:59
+|_Not valid after:  2035-09-19T18:21:59
+|_http-server-header: none
+|_ssl-date: TLS randomness does not represent time
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Fri, 05 Dec 2025 12:32:29 GMT
+|     Content-Type: text/html
+|     Content-Length: 138
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   GetRequest: 
+|     HTTP/1.1 302 Found
+|     Content-Type: text/html;charset=utf-8
+|     Content-Length: 115
+|     Connection: close
+|     Expires: Sun, 28 Jan 2007 00:00:00 GMT
+|     Vary: Accept-Encoding
+|     Server: none
+|     Location: https:///auth/login?from_page=/
+|     Pragma: no-cache
+|     Date: Fri, 05 Dec 2025 12:32:25 GMT
+|     Set-Cookie: session_id=8653e4b6a33ed9b221e3246a36875dde0845bc3e; expires=Fri, 05 Dec 2025 13:32:25 GMT; httponly; Path=/; secure
+|     X-Frame-Options: SAMEORIGIN
+|     X-XSS-Protection: 1; mode=block
+|     X-Content-Type-Options: nosniff
+|     Strict-Transport-Security: max-age=31536000
+|     Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'self'; media-src 'self'; child-src 'self'
+|     X-Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' '
+|   RPCCheck: 
+|     HTTP/1.1 400 Bad Request
+|     Date: Fri, 05 Dec 2025 12:32:28 GMT
+|     Content-Type: text/html
+|     Content-Length: 138
+|     Connection: close
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|     </html>
+|   RTSPRequest: 
+|     <html>
+|     <head><title>400 Bad Request</title></head>
+|     <body bgcolor="white">
+|     <center><h1>400 Bad Request</h1></center>
+|     </body>
+|_    </html>
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.95%T=SSL%I=7%D=12/5%Time=6932D0CE%P=aarch64-unknown-lin
+SF:ux-gnu%r(GetRequest,106,"HTTP/1\.1\x20404\x20Not\x20Found\r\nDate:\x20F
+SF:ri,\x2005\x20Dec\x202025\x2012:32:14\x20GMT\r\nContent-Type:\x20text/ht
+SF:ml\r\nContent-Length:\x20134\r\nConnection:\x20close\r\n\r\n<html>\r\n<
+SF:head><title>404\x20Not\x20Found</title></head>\r\n<body\x20bgcolor=\"wh
+SF:ite\">\r\n<center><h1>404\x20Not\x20Found</h1></center>\r\n</body>\r\n<
+SF:/html>\r\n")%r(FourOhFourRequest,106,"HTTP/1\.1\x20404\x20Not\x20Found\
+SF:r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2012:32:15\x20GMT\r\nContent-Typ
+SF:e:\x20text/html\r\nContent-Length:\x20134\r\nConnection:\x20close\r\n\r
+SF:\n<html>\r\n<head><title>404\x20Not\x20Found</title></head>\r\n<body\x2
+SF:0bgcolor=\"white\">\r\n<center><h1>404\x20Not\x20Found</h1></center>\r\
+SF:n</body>\r\n</html>\r\n")%r(tor-versions,10C,"HTTP/1\.1\x20400\x20Bad\x
+SF:20Request\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2012:32:16\x20GMT\r\nC
+SF:ontent-Type:\x20text/html\r\nContent-Length:\x20138\r\nConnection:\x20c
+SF:lose\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>
+SF:\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h
+SF:1></center>\r\n</body>\r\n</html>\r\n")%r(RTSPRequest,8A,"<html>\r\n<he
+SF:ad><title>400\x20Bad\x20Request</title></head>\r\n<body\x20bgcolor=\"wh
+SF:ite\">\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n</body>\r\
+SF:n</html>\r\n")%r(RPCCheck,10C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDa
+SF:te:\x20Fri,\x2005\x20Dec\x202025\x2012:32:22\x20GMT\r\nContent-Type:\x2
+SF:0text/html\r\nContent-Length:\x20138\r\nConnection:\x20close\r\n\r\n<ht
+SF:ml>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<body\x20bg
+SF:color=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n
+SF:</body>\r\n</html>\r\n")%r(DNSVersionBindReqTCP,10C,"HTTP/1\.1\x20400\x
+SF:20Bad\x20Request\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2012:32:23\x20G
+SF:MT\r\nContent-Type:\x20text/html\r\nContent-Length:\x20138\r\nConnectio
+SF:n:\x20close\r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title>
+SF:</head>\r\n<body\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x20Req
+SF:uest</h1></center>\r\n</body>\r\n</html>\r\n");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port8080-TCP:V=7.95%T=SSL%I=7%D=12/5%Time=6932D0DA%P=aarch64-unknown-li
+SF:nux-gnu%r(GetRequest,562,"HTTP/1\.1\x20302\x20Found\r\nContent-Type:\x2
+SF:0text/html;charset=utf-8\r\nContent-Length:\x20115\r\nConnection:\x20cl
+SF:ose\r\nExpires:\x20Sun,\x2028\x20Jan\x202007\x2000:00:00\x20GMT\r\nVary
+SF::\x20Accept-Encoding\r\nServer:\x20none\r\nLocation:\x20https:///auth/l
+SF:ogin\?from_page=/\r\nPragma:\x20no-cache\r\nDate:\x20Fri,\x2005\x20Dec\
+SF:x202025\x2012:32:25\x20GMT\r\nSet-Cookie:\x20session_id=8653e4b6a33ed9b
+SF:221e3246a36875dde0845bc3e;\x20expires=Fri,\x2005\x20Dec\x202025\x2013:3
+SF:2:25\x20GMT;\x20httponly;\x20Path=/;\x20secure\r\nX-Frame-Options:\x20S
+SF:AMEORIGIN\r\nX-XSS-Protection:\x201;\x20mode=block\r\nX-Content-Type-Op
+SF:tions:\x20nosniff\r\nStrict-Transport-Security:\x20max-age=31536000\r\n
+SF:Content-Security-Policy:\x20default-src\x20'self';\x20script-src\x20'se
+SF:lf'\x20'unsafe-eval'\x20'unsafe-inline';\x20style-src\x20'self'\x20'uns
+SF:afe-inline';\x20img-src\x20'self'\x20data:;\x20connect-src\x20'self';\x
+SF:20font-src\x20'self';\x20object-src\x20'self';\x20media-src\x20'self';\
+SF:x20child-src\x20'self'\r\nX-Content-Security-Policy:\x20default-src\x20
+SF:'self';\x20script-src\x20'self'\x20'unsafe-eval'\x20'unsafe-inline';\x2
+SF:0style-src\x20'self'\x20'")%r(RTSPRequest,8A,"<html>\r\n<head><title>40
+SF:0\x20Bad\x20Request</title></head>\r\n<body\x20bgcolor=\"white\">\r\n<c
+SF:enter><h1>400\x20Bad\x20Request</h1></center>\r\n</body>\r\n</html>\r\n
+SF:")%r(RPCCheck,10C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nDate:\x20Fri,\
+SF:x2005\x20Dec\x202025\x2012:32:28\x20GMT\r\nContent-Type:\x20text/html\r
+SF:\nContent-Length:\x20138\r\nConnection:\x20close\r\n\r\n<html>\r\n<head
+SF:><title>400\x20Bad\x20Request</title></head>\r\n<body\x20bgcolor=\"whit
+SF:e\">\r\n<center><h1>400\x20Bad\x20Request</h1></center>\r\n</body>\r\n<
+SF:/html>\r\n")%r(DNSVersionBindReqTCP,10C,"HTTP/1\.1\x20400\x20Bad\x20Req
+SF:uest\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2012:32:29\x20GMT\r\nConten
+SF:t-Type:\x20text/html\r\nContent-Length:\x20138\r\nConnection:\x20close\
+SF:r\n\r\n<html>\r\n<head><title>400\x20Bad\x20Request</title></head>\r\n<
+SF:body\x20bgcolor=\"white\">\r\n<center><h1>400\x20Bad\x20Request</h1></c
+SF:enter>\r\n</body>\r\n</html>\r\n");
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 3.2.0 (95%), HP Onboard Administrator 4.12 - 4.40 (90%), OpenWrt Kamikaze 7.09 (Linux 2.6.22) (90%), Barracuda Web Filter (90%), Tomato 1.27 - 1.28 (Linux 2.4.20) (90%), Linux 2.6.26 (89%), Kyocera CopyStar CS-2560 printer (89%), Linux 2.6.31 - 2.6.32 (89%), Linux 3.14 (89%), Linux 2.6.32 (89%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 1 hop
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec  5 13:33:19 2025 -- 1 IP address (1 host up) scanned in 79.74 seconds

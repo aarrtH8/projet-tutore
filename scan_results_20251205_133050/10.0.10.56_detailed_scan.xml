@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Fri Dec  5 14:42:56 2025 as: /usr/lib/nmap/nmap -p 135,139,445,3389,5040,49666,49672,49700 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.56_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.56_detailed_scan.txt 10.0.10.56 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -p 135,139,445,3389,5040,49666,49672,49700 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.56_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.56_detailed_scan.txt 10.0.10.56" start="1764942176" startstr="Fri Dec  5 14:42:56 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="8" services="135,139,445,3389,5040,49666,49672,49700"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.0.10.56" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1764942177" endtime="1764942272"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.0.10.56" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ms-wbt-server" product="Microsoft Terminal Services" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="rdp-ntlm-info" output="&#xa;  Target_Name: PANOPTIS&#xa;  NetBIOS_Domain_Name: PANOPTIS&#xa;  NetBIOS_Computer_Name: POSTE-WIN10&#xa;  DNS_Domain_Name: panoptis.lan&#xa;  DNS_Computer_Name: Poste-Win10.panoptis.lan&#xa;  Product_Version: 10.0.19041&#xa;  System_Time: 2025-12-05T13:44:06+00:00"><elem key="Target_Name">PANOPTIS</elem>
+<elem key="NetBIOS_Domain_Name">PANOPTIS</elem>
+<elem key="NetBIOS_Computer_Name">POSTE-WIN10</elem>
+<elem key="DNS_Domain_Name">panoptis.lan</elem>
+<elem key="DNS_Computer_Name">Poste-Win10.panoptis.lan</elem>
+<elem key="Product_Version">10.0.19041</elem>
+<elem key="System_Time">2025-12-05T13:44:06+00:00</elem>
+</script><script id="ssl-date" output="2025-12-05T13:44:14+00:00; -18s from scanner time."><elem key="delta">-18.0</elem>
+<elem key="date">2025-12-05T13:44:14+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=Poste-Win10.panoptis.lan&#xa;Not valid before: 2025-11-06T09:42:56&#xa;Not valid after:  2026-05-08T09:42:56"><table key="subject">
+<elem key="commonName">Poste-Win10.panoptis.lan</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">Poste-Win10.panoptis.lan</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">BFB9F9199C95FC8FDE12E9E738D17A4D3994E4648A0979D7FDD34B240AA1441CEAF45B79020A3D330B15BC22E4C0BCDC10D05733B974CCBB23493DA69E36312635E51606F52391B1D2D62FB7E8970B172B1696A0A5B31B1FB68BE118A417015CB7459C4B78EE050FB553C54A6F1352AF8A258FE4ADEC318CA8711F977D2EDE4E821A2696D6714C0F727757C383CA79134909027190FB492929F43AE4B2930C6998A98F1919CE3A7FD76E538D0A207F977F35A0AE6127F6B95DF868566610F21006E4E1B04B9A5AF2B025E210576B49A7D2D6453BAA21D117DA5D2360DD9B691F8998999DAFA705926F78890E9CEC656987DFD10F7E3B988D0F1490D345FE10CD</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-11-06T09:42:56</elem>
+<elem key="notAfter">2026-05-08T09:42:56</elem>
+</table>
+<elem key="md5">0a5409cf352ae62733206ed74680fa31</elem>
+<elem key="sha1">333da3e163d9fd7937b8b28c51f5a866059c663a</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC9DCCAdygAwIBAgIQTpAhcsechoVMIlwK6sataDANBgkqhkiG9w0BAQsFADAj&#xa;MSEwHwYDVQQDExhQb3N0ZS1XaW4xMC5wYW5vcHRpcy5sYW4wHhcNMjUxMTA2MDk0&#xa;MjU2WhcNMjYwNTA4MDk0MjU2WjAjMSEwHwYDVQQDExhQb3N0ZS1XaW4xMC5wYW5v&#xa;cHRpcy5sYW4wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC/ufkZnJX8&#xa;j94S6ec40XpNOZTkZIoJedf900skCqFEHOr0W3kCCj0zCxW8IuTAvNwQ0FczuXTM&#xa;uyNJPaaeNjEmNeUWBvUjkbHS1i+36JcLFysWlqClsxsftovhGKQXAVy3RZxLeO4F&#xa;D7VTxUpvE1KviiWP5K3sMYyocR+XfS7eToIaJpbWcUwPcndXw4PKeRNJCQJxkPtJ&#xa;KSn0OuSykwxpmKmPGRnOOn/XblONCiB/l381oK5hJ/a5XfhoVmYQ8hAG5OGwS5pa&#xa;8rAl4hBXa0mn0tZFO6oh0RfaXSNg3ZtpH4mYmZ2vpwWSb3iJDpzsZWmH39EPfjuY&#xa;jQ8UkNNF/hDNAgMBAAGjJDAiMBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQE&#xa;AwIEMDANBgkqhkiG9w0BAQsFAAOCAQEAIFZXDmYTLV6pKlriXDwc5ZzcSM/70nGw&#xa;B+ASpifP7JZqC44AYxrwraP8OiPse3AZjpcoqeZd6UPIYSlqE/aa3N+XzdiRsCHs&#xa;8MnDnqn2glgkg1mcVJ/0Q4M0dcjWCZVRkn0GYaYJyBeItNmbI4dDRndIu2YhnLR+&#xa;v2XQsC6gq78A8k0AOlKgImIu9nXM1tz6pD1e/NQFbD7YfLiDFkY1fFEMBDyglKpb&#xa;1BFl2hXT+6LD1SSZfxy3gOd8Wsp0ewgHOJdYuwSsWoV+UWpYWzNSVyPrOQ2Z5lEj&#xa;Kx+iJWqzMd7X3eBRkP35HaISGZs44XMi7y8K4AhE6T8QIJRjsqoJsA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="5040"><state state="open" reason="syn-ack" reason_ttl="127"/></port>
+<port protocol="tcp" portid="49666"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49672"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49700"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="135"/>
+<portused state="closed" proto="udp" portid="33934"/>
+<osmatch name="Microsoft Windows 10 1803" accuracy="100" line="75008">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="100"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10 1903 - 21H1" accuracy="100" line="75123">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="100"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+</osmatch>
+</os>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="5F4A95AF,C41D9274,4D8DD502,2782AD62,3D28C6F1,46DCDF3F"/>
+<ipidsequence class="Incremental" values="8DAF,8DB0,8DB1,8DB2,8DB3,8DB4"/>
+<tcptssequence class="none returned (unsupported)"/>
+<hostscript><script id="smb2-security-mode" output="&#xa;  3:1:1: &#xa;    Message signing enabled but not required"><table key="3:1:1">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="clock-skew" output="mean: -18s, deviation: 0s, median: -18s"><elem key="mean">-18</elem>
+<elem key="stddev">0</elem>
+<elem key="median">-18</elem>
+<elem key="count">3</elem>
+</script><script id="smb2-time" output="&#xa;  date: 2025-12-05T13:44:08&#xa;  start_date: N/A"><elem key="date">2025-12-05T13:44:08</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="1768" rttvar="900" to="100000"/>
+</host>
+<runstats><finished time="1764942272" timestr="Fri Dec  5 14:44:32 2025" summary="Nmap done at Fri Dec  5 14:44:32 2025; 1 IP address (1 host up) scanned in 96.95 seconds" elapsed="96.95" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,44 @@
+# Nmap 7.95 scan initiated Fri Dec  5 14:42:56 2025 as: /usr/lib/nmap/nmap -p 135,139,445,3389,5040,49666,49672,49700 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.56_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.56_detailed_scan.txt 10.0.10.56
+Nmap scan report for 10.0.10.56
+Host is up (0.0018s latency).
+
+PORT      STATE SERVICE       VERSION
+135/tcp   open  msrpc         Microsoft Windows RPC
+139/tcp   open  netbios-ssn   Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds?
+3389/tcp  open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: PANOPTIS
+|   NetBIOS_Domain_Name: PANOPTIS
+|   NetBIOS_Computer_Name: POSTE-WIN10
+|   DNS_Domain_Name: panoptis.lan
+|   DNS_Computer_Name: Poste-Win10.panoptis.lan
+|   Product_Version: 10.0.19041
+|_  System_Time: 2025-12-05T13:44:06+00:00
+|_ssl-date: 2025-12-05T13:44:14+00:00; -18s from scanner time.
+| ssl-cert: Subject: commonName=Poste-Win10.panoptis.lan
+| Not valid before: 2025-11-06T09:42:56
+|_Not valid after:  2026-05-08T09:42:56
+5040/tcp  open  unknown
+49666/tcp open  msrpc         Microsoft Windows RPC
+49672/tcp open  msrpc         Microsoft Windows RPC
+49700/tcp open  msrpc         Microsoft Windows RPC
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Microsoft Windows 10
+OS CPE: cpe:/o:microsoft:windows_10
+OS details: Microsoft Windows 10 1803, Microsoft Windows 10 1903 - 21H1
+Network Distance: 2 hops
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+|_clock-skew: mean: -18s, deviation: 0s, median: -18s
+| smb2-time: 
+|   date: 2025-12-05T13:44:08
+|_  start_date: N/A
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec  5 14:44:32 2025 -- 1 IP address (1 host up) scanned in 96.95 seconds

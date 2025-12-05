@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Fri Dec  5 13:43:11 2025 as: /usr/lib/nmap/nmap -p 22,111 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.20_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.20_detailed_scan.txt 10.0.10.20 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -p 22,111 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.20_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.20_detailed_scan.txt 10.0.10.20" start="1764938591" startstr="Fri Dec  5 13:43:11 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="22,111"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.0.10.20" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1764938592" endtime="1764938601"><status state="up" reason="echo-reply" reason_ttl="63"/>
+<address addr="10.0.10.20" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="10.0p2 Debian 7" extrainfo="protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:10.0p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2,3,4        111/tcp   rpcbind&#xa;  100000  2,3,4        111/udp   rpcbind&#xa;  100000  3,4          111/tcp6  rpcbind&#xa;  100000  3,4          111/udp6  rpcbind&#xa;"><table key="100000">
+<table key="udp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+</table>
+<table key="local">
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">/run/rpcbind.sock</elem>
+<elem key="owner">superuser</elem>
+</table>
+<table key="tcp6">
+<elem key="port">111</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+</table>
+<table key="tcp">
+<elem key="port">111</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+</table>
+<table key="udp6">
+<elem key="port">111</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="udp" portid="35267"/>
+<osmatch name="Linux 4.19 - 5.15" accuracy="100" line="70666">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="4069110" lastboot="Sun Oct 19 12:24:51 2025"/>
+<distance value="2"/>
+<tcpsequence index="257" difficulty="Good luck!" values="EB8C3C70,81A2F14E,4C24C0B5,95686A85,73E9F6E1,4AD83E11"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="F289AADF,F289AB42,F289ABA7,F289AC0B,F289AC6F,F289ACD3"/>
+<times srtt="1285" rttvar="423" to="100000"/>
+</host>
+<runstats><finished time="1764938601" timestr="Fri Dec  5 13:43:21 2025" summary="Nmap done at Fri Dec  5 13:43:21 2025; 1 IP address (1 host up) scanned in 9.95 seconds" elapsed="9.95" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

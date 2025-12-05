@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.95 scan initiated Fri Dec  5 14:05:30 2025 as: /usr/lib/nmap/nmap -p 80,111,139,443,445,1058,2049,6160,6162,6169,6170,6185,6190,10443,19001,19004,33035 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.200_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.200_detailed_scan.txt 10.0.10.200 -->
+<nmaprun scanner="nmap" args="/usr/lib/nmap/nmap -p 80,111,139,443,445,1058,2049,6160,6162,6169,6170,6185,6190,10443,19001,19004,33035 -sC -sV -O -oX scan_results_20251205_133050/10.0.10.200_detailed_scan.xml -oN scan_results_20251205_133050/10.0.10.200_detailed_scan.txt 10.0.10.200" start="1764939930" startstr="Fri Dec  5 14:05:30 2025" version="7.95" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="17" services="80,111,139,443,445,1058,2049,6160,6162,6169-6170,6185,6190,10443,19001,19004,33035"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="unknown-response" reason_ttl="0"/>
+<address addr="10.0.10.200" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1764939932" endtime="1764940071"><status state="up" reason="syn-ack" reason_ttl="63"/>
+<address addr="10.0.10.200" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.22.1" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.22.1</cpe></service><script id="http-server-header" output="nginx/1.22.1"><elem>nginx/1.22.1</elem>
+</script><script id="http-title" output="Did not follow redirect to https://10.0.10.200/"><elem key="redirect_url">https://10.0.10.200/</elem>
+</script></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2,3,4        111/tcp   rpcbind&#xa;  100000  2,3,4        111/udp   rpcbind&#xa;  100000  3,4          111/tcp6  rpcbind&#xa;  100000  3,4          111/udp6  rpcbind&#xa;  100003  3           2049/tcp   nfs&#xa;  100003  3           2049/tcp6  nfs&#xa;  100005  3           1058/tcp   mountd&#xa;  100005  3           1058/tcp6  mountd&#xa;"><table key="100005">
+<table key="tcp">
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">unknown</elem>
+<elem key="port">1058</elem>
+</table>
+<table key="tcp6">
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="addr">::</elem>
+<elem key="owner">unknown</elem>
+<elem key="port">1058</elem>
+</table>
+</table>
+<table key="100003">
+<table key="tcp">
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">unknown</elem>
+<elem key="port">2049</elem>
+</table>
+<table key="tcp6">
+<table key="version">
+<elem>3</elem>
+</table>
+<elem key="addr">::</elem>
+<elem key="owner">unknown</elem>
+<elem key="port">2049</elem>
+</table>
+</table>
+<table key="100000">
+<table key="udp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+</table>
+<table key="tcp6">
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+</table>
+<table key="local">
+<elem key="owner">superuser</elem>
+<elem key="addr">/run/rpcbind.sock</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+</table>
+<table key="udp6">
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">::</elem>
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+</table>
+<table key="tcp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+<elem key="owner">superuser</elem>
+<elem key="port">111</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="4" method="probed" conf="10"><cpe>cpe:/a:samba:samba:4</cpe></service></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="http-title" output="Veeam Backup &amp; Replication"><elem key="title">Veeam Backup &amp; Replication</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="ssl-cert" output="Subject: commonName=Veeam-APP-1&#xa;Subject Alternative Name: IP Address:10.0.10.200, DNS:Veeam-APP-1&#xa;Not valid before: 2025-11-19T20:59:28&#xa;Not valid after:  2035-11-19T20:59:28"><table key="subject">
+<elem key="commonName">Veeam-APP-1</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">Veeam-APP-1</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">C04CB0DEEC5C5230D518EB5B97A31FA7D457EFE3DFB7F8525C940B6A6637FE14FE9FF4AFC741496C7D8B9D0513ECCEDD1671FC0064887F55CFAD4F74C63645F416B67135C05661E7D9B5731116EC2040E17DE3385366A600DFD79C5471EEFC3730ED401A42B6A733438281A1BF8A916280505970F6E7E181DFF6973959B66C795C8286BEDEB43504824F4828B32CECEED385672084FCBF2216F138E0FC3E62D0048ACD205378F4F00F5DC6E3AF24B44E10C2B4E6265AD72E37453563ECA9B8648644285A19A7EF32962D89D1D2F8985F9DBF3EAC42AC1234C2DA2FF495BBA009C18C50B13FEF994E2D0629975E126DA8614F4625EBD605098005A98A9FDFEEF9</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE, pathlen:0</elem>
+<elem key="critical">true</elem>
+</table>
+<table>
+<elem key="name">1.3.6.1.4.1.31023.1.1.9000.2</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">IP Address:10.0.10.200, DNS:Veeam-APP-1</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-11-19T20:59:28</elem>
+<elem key="notAfter">2035-11-19T20:59:28</elem>
+</table>
+<elem key="md5">fe8ebdc913ff8879c7ba873473d63c6a</elem>
+<elem key="sha1">5ad725d40f70799f226eaede0205b56fdeab23e6</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDKzCCAhOgAwIBAgIILhffEXz8ImkwDQYJKoZIhvcNAQELBQAwFjEUMBIGA1UE&#xa;AwwLVmVlYW0tQVBQLTEwHhcNMjUxMTE5MjA1OTI4WhcNMzUxMTE5MjA1OTI4WjAW&#xa;MRQwEgYDVQQDDAtWZWVhbS1BUFAtMTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCC&#xa;AQoCggEBAMBMsN7sXFIw1RjrW5ejH6fUV+/j37f4UlyUC2pmN/4U/p/0r8dBSWx9&#xa;i50FE+zO3RZx/ABkiH9Vz61PdMY2RfQWtnE1wFZh59m1cxEW7CBA4X3jOFNmpgDf&#xa;15xUce78NzDtQBpCtqczQ4KBob+KkWKAUFlw9ufhgd/2lzlZtmx5XIKGvt60NQSC&#xa;T0gosyzs7tOFZyCE/L8iFvE44Pw+YtAEis0gU3j08A9dxuOvJLROEMK05iZa1y43&#xa;RTVj7Km4ZIZEKFoZp+8yli2J0dL4mF+dvz6sQqwSNMLaL/SVu6AJwYxQsT/vmU4t&#xa;BimXXhJtqGFPRiXr1gUJgAWpip/f7vkCAwEAAaN9MHswEgYDVR0TAQH/BAgwBgEB&#xa;/wIBADAyBg0rBgEEAYHyLwEBxigCBCEMH1ZlZWFtIEJhY2t1cCBTZXJ2ZXIgQ2Vy&#xa;dGlmaWNhdGUwHAYDVR0RBBUwE4cECgAKyIILVmVlYW0tQVBQLTEwEwYDVR0lBAww&#xa;CgYIKwYBBQUHAwEwDQYJKoZIhvcNAQELBQADggEBAIfsy+6TF5gCIrlW5amyK81y&#xa;q62Md4PM5SyQnBVMRLJX9+61gwDMXOt+kzj5xvGiKvh5byAw+VGSkj1xAoZkL7XH&#xa;cxA2bF7UUYYU36ViyRsD/QpS7zs7zXK6wjg9DtTl0ZrGx7zDUcM//S97bMxkdV5h&#xa;WawkWt91MOVuQz4G/aH4t6LvU3zNEyiR846AxHE1s+brCtCLcOcDWKq9Odae3RTJ&#xa;EksYdCLSVrA2ggWcl9RMGl5JnohOz1dsSBh9PlysxZnk0DQbuTuNN9OHXDh1Z5nO&#xa;7GdjfvVSFvPRAPJz9OIKrj7yTN/3pUuUrhV+7AWtOsgZHJ7Bl6zlP44Bco4EcNA=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="4" method="probed" conf="10"><cpe>cpe:/a:samba:samba:4</cpe></service></port>
+<port protocol="tcp" portid="1058"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="mountd" version="3" extrainfo="RPC #100005" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="2049"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="nfs" version="3" extrainfo="RPC #100003" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="6160"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ecmp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="6162"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="patrol-coll" method="table" conf="3"/></port>
+<port protocol="tcp" portid="6169"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="6170"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="unknown" tunnel="ssl" method="table" conf="3"/><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="ssl-cert" output="Subject: commonName=vbr-5cc989ac/organizationName=Veeam&#xa;Subject Alternative Name: DNS:vbr-5cc989ac, DNS:vbr-5cc989ac&#xa;Not valid before: 2025-11-01T21:21:34&#xa;Not valid after:  2035-11-02T21:21:34"><table key="subject">
+<elem key="commonName">vbr-5cc989ac</elem>
+<elem key="organizationName">Veeam</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">vbr-5cc989ac</elem>
+<elem key="organizationName">Veeam</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">B9A8B4164DE8D1670F12819647FE30D7E1398B9E8F1C4EE87561DF9DC2547BF4A2BFEFA3FB5EB6EA90BE452D5D81EE1A0F5E6900E2D69CBB5D16F3828510A80495027D584A584D2A08315EB76E4EFAB88AC08E6C8103AFC01DE1F3FBFABF8B2866BBD2C3A2AA869A9C0DC53AD8A5FBFB51C5D58FB65B36213A8D57C5EF5D1D3ADEBFFBDC2F02977F8BBBBA5CF0A9D0111CA8AB9CE77F53D66879B714735B96B325C0E2AFD56EA09EC9ED6E5D07F789DBEAA4E28AB1317060CAC9DF9DE70A6DF1B866A95173CD7A9BD76568198D76D721A668DC84B9BD57DCC63A5D21BC7B6AD66DF5E366D9BF576825D227C12EE4B65EA4F309CB3BFB30E99E75258624836823</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:vbr-5cc989ac, DNS:vbr-5cc989ac</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-11-01T21:21:34</elem>
+<elem key="notAfter">2035-11-02T21:21:34</elem>
+</table>
+<elem key="md5">9fc7b11bf2547ba70e98bf4a060c23b6</elem>
+<elem key="sha1">8d2446869a8706a4bbd88644de75c42fe5713adf</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDJjCCAg6gAwIBAgIIIFrUxZjyEegwDQYJKoZIhvcNAQELBQAwJzEVMBMGA1UE&#xa;AwwMdmJyLTVjYzk4OWFjMQ4wDAYDVQQKDAVWZWVhbTAeFw0yNTExMDEyMTIxMzRa&#xa;Fw0zNTExMDIyMTIxMzRaMCcxFTATBgNVBAMMDHZici01Y2M5ODlhYzEOMAwGA1UE&#xa;CgwFVmVlYW0wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC5qLQWTejR&#xa;Zw8SgZZH/jDX4TmLno8cTuh1Yd+dwlR79KK/76P7XrbqkL5FLV2B7hoPXmkA4tac&#xa;u10W84KFEKgElQJ9WEpYTSoIMV63bk76uIrAjmyBA6/AHeHz+/q/iyhmu9LDoqqG&#xa;mpwNxTrYpfv7UcXVj7ZbNiE6jVfF710dOt6/+9wvApd/i7u6XPCp0BEcqKuc539T&#xa;1mh5txRzW5azJcDir9VuoJ7J7W5dB/eJ2+qk4oqxMXBgysnfnecKbfG4ZqlRc816&#xa;m9dlaBmNdtchpmjchLm9V9zGOl0hvHtq1m3142bZv1doJdInwS7ktl6k8wnLO/sw&#xa;6Z51JYYkg2gjAgMBAAGjVjBUMCUGA1UdEQQeMByCDHZici01Y2M5ODlhY4IMdmJy&#xa;LTVjYzk4OWFjMBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIFoDAJBgNV&#xa;HRMEAjAAMA0GCSqGSIb3DQEBCwUAA4IBAQAG8bNDIFqo9fWPEGphjJo3MTowZ9uI&#xa;nzFshw6MLj/TjjKThZPJ2dXNjPgoiJhSU70E875uQgkCiTAs3ePEQK5979iIVDcZ&#xa;yC2PaJSEEfButqHKXf1R0YPor+4bR0c/K5exvQspeTZvhZsHD8l2BvWe0Wpu077x&#xa;aNHpXSLpsFhh3ycu/ybOMFuEjO3DaH0RG+q4PXF6QJHSiHDW9QOeJmS577LhxrDu&#xa;MPWUne959dumhB71UcUSbRrrZZ8MvZQHRdns3IUL+wWm7VdBno+pan+DTou2Msja&#xa;tHXtrOHcbgun95wfsyVTh0KNyUJsRW/kCbCCvITOXpcIvvw0ZAWPgoVS&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="6185"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="6190"><state state="open" reason="syn-ack" reason_ttl="63"/></port>
+<port protocol="tcp" portid="10443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx</cpe></service><script id="ssl-cert" output="Subject: commonName=Veeam-APP-1/organizationName=Veeam&#xa;Subject Alternative Name: DNS:Veeam-APP-1, DNS:Veeam-APP-1&#xa;Not valid before: 2025-11-19T20:59:04&#xa;Not valid after:  2035-11-20T20:59:04"><table key="subject">
+<elem key="commonName">Veeam-APP-1</elem>
+<elem key="organizationName">Veeam</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">Veeam-APP-1</elem>
+<elem key="organizationName">Veeam</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">AD9EF4CD7EEF053DCD13226F6EA4AA48D9838B354ABF6E48899302AEBE840CCE9FF8E6317DC0FDEDD397D501ED5915AC6DDBCD7028B408E208970CE7D9DF3ED5A6C8B994CFE78093EF7EAC26F9ED52EE1D78BE59BD0FBD0212A3A993F6384A4E50C7FAE32DA5320852FB25BE4A9B75C48423B64686FADF7C279E2D1262E9CAF8BA4AFAFB8ADDC4663A718D80E9490AB8A46DB50B5939531D906A519A1C4137E15285D18F15ADBACEF80E8999D5F0D91DA91C98BF18C83122F41FB27BC6E413C5D61473BF7E0EA4BDBC0893C3490F345E375D8A3D747A843A9C4E0C88B793B516762693E90DDA83BA729CA69E2F6F61E2A704A73F21D3A7D1F8D9BD2CAA6AB5A5</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:Veeam-APP-1, DNS:Veeam-APP-1</elem>
+</table>
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Key Encipherment</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:FALSE</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2025-11-19T20:59:04</elem>
+<elem key="notAfter">2035-11-20T20:59:04</elem>
+</table>
+<elem key="md5">c1af9cf8636aa25209f6103d7a8d943e</elem>
+<elem key="sha1">6b1f7247b734a6b75aa957a4269edca57227f711</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIDIzCCAgugAwIBAgIJAJ8mhwmiP5HiMA0GCSqGSIb3DQEBCwUAMCYxFDASBgNV&#xa;BAMMC1ZlZWFtLUFQUC0xMQ4wDAYDVQQKDAVWZWVhbTAeFw0yNTExMTkyMDU5MDRa&#xa;Fw0zNTExMjAyMDU5MDRaMCYxFDASBgNVBAMMC1ZlZWFtLUFQUC0xMQ4wDAYDVQQK&#xa;DAVWZWVhbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK2e9M1+7wU9&#xa;zRMib26kqkjZg4s1Sr9uSImTAq6+hAzOn/jmMX3A/e3Tl9UB7VkVrG3bzXAotAji&#xa;CJcM59nfPtWmyLmUz+eAk+9+rCb57VLuHXi+Wb0PvQISo6mT9jhKTlDH+uMtpTII&#xa;UvslvkqbdcSEI7ZGhvrffCeeLRJi6cr4ukr6+4rdxGY6cY2A6UkKuKRttQtZOVMd&#xa;kGpRmhxBN+FShdGPFa26zvgOiZnV8NkdqRyYvxjIMSL0H7J7xuQTxdYUc79+DqS9&#xa;vAiTw0kPNF43XYo9dHqEOpxODIi3k7UWdiaT6Q3ag7pynKaeL29h4qcEpz8h06fR&#xa;+Nm9LKpqtaUCAwEAAaNUMFIwIwYDVR0RBBwwGoILVmVlYW0tQVBQLTGCC1ZlZWFt&#xa;LUFQUC0xMBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIFoDAJBgNVHRME&#xa;AjAAMA0GCSqGSIb3DQEBCwUAA4IBAQBbG3Z18bUrlRUutUfcXognzEUJnBCnePTr&#xa;ce0/K1uo88vOL8c95DBPSQ1pmEMiXLgBSH4c+PfwvWISwEsNnMC7iWiBs89AIp59&#xa;k0z6iYUCimpvqs83IzaCwU8aeYdrtwmF1jug/X2rVMckLSJj0MbYAA0WZ1/waEVU&#xa;KHGns/THvfAnFntmdEUhwGZD6xsQMTtj9b6xLCLxZd2KUZvEnM8O+O4AndD+a610&#xa;cdXLITCtLAhQ2e0lQZuguCGkwzPvq0lfMbVRmPdOizKk7PjJIdIARlio7iw0t/2W&#xa;RrB6gKoH0geBlRRdLQo1589csQLvsIHSPoA9ZsTtMnW2Q7549+aW&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="http-title" output="Veeam Host Management"><elem key="title">Veeam Host Management</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+<port protocol="tcp" portid="19001"><state state="open" reason="syn-ack" reason_ttl="63"/></port>
+<port protocol="tcp" portid="19004"><state state="open" reason="syn-ack" reason_ttl="63"/></port>
+<port protocol="tcp" portid="33035"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="unknown" servicefp="SF-Port33035-TCP:V=7.95%I=7%D=12/5%Time=6932D8A7%P=aarch64-unknown-linux-gnu%r(GetRequest,78,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x2018\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:05:41\x20GMT\r\n\r\nResource\x20not\x20found&quot;)%r(HTTPOptions,78,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x2018\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:05:41\x20GMT\r\n\r\nResource\x20not\x20found&quot;)%r(RTSPRequest,76,&quot;HTTP/1\.1\x20505\x20HTTP\x20Version\x20Not\x20Supported\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:05:41\x20GMT\r\n\r\n&quot;)%r(Help,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:05:56\x20GMT\r\n\r\n&quot;)%r(SSLSessionReq,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:05:56\x20GMT\r\n\r\n&quot;)%r(TerminalServerCookie,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:05:56\x20GMT\r\n\r\n&quot;)%r(TLSSessionReq,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:05:56\x20GMT\r\n\r\n&quot;)%r(Kerberos,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:05:56\x20GMT\r\n\r\n&quot;)%r(FourOhFourRequest,78,&quot;HTTP/1\.1\x20404\x20Not\x20Found\r\nContent-Length:\x2018\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:06:07\x20GMT\r\n\r\nResource\x20not\x20found&quot;)%r(LPDString,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:06:07\x20GMT\r\n\r\n&quot;)%r(LDAPSearchReq,67,&quot;HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:06:07\x20GMT\r\n\r\n&quot;)%r(SIPOptions,76,&quot;HTTP/1\.1\x20505\x20HTTP\x20Version\x20Not\x20Supported\r\nContent-Length:\x200\r\nConnection:\x20close\r\nDate:\x20Fri,\x2005\x20Dec\x202025\x2013:06:12\x20GMT\r\n\r\n&quot;);" method="table" conf="3"/><script id="fingerprint-strings" output="&#xa;  FourOhFourRequest: &#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Length: 18&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:06:07 GMT&#xa;    Resource not found&#xa;  GetRequest, HTTPOptions: &#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Length: 18&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:05:41 GMT&#xa;    Resource not found&#xa;  Help, Kerberos, SSLSessionReq, TLSSessionReq, TerminalServerCookie: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:05:56 GMT&#xa;  LDAPSearchReq, LPDString: &#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:06:07 GMT&#xa;  RTSPRequest: &#xa;    HTTP/1.1 505 HTTP Version Not Supported&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:05:41 GMT&#xa;  SIPOptions: &#xa;    HTTP/1.1 505 HTTP Version Not Supported&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:06:12 GMT"><elem key="FourOhFourRequest">&#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Length: 18&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:06:07 GMT&#xa;    Resource not found</elem>
+<elem key="GetRequest, HTTPOptions">&#xa;    HTTP/1.1 404 Not Found&#xa;    Content-Length: 18&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:05:41 GMT&#xa;    Resource not found</elem>
+<elem key="Help, Kerberos, SSLSessionReq, TLSSessionReq, TerminalServerCookie">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:05:56 GMT</elem>
+<elem key="LDAPSearchReq, LPDString">&#xa;    HTTP/1.1 400 Bad Request&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:06:07 GMT</elem>
+<elem key="RTSPRequest">&#xa;    HTTP/1.1 505 HTTP Version Not Supported&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:05:41 GMT</elem>
+<elem key="SIPOptions">&#xa;    HTTP/1.1 505 HTTP Version Not Supported&#xa;    Content-Length: 0&#xa;    Connection: close&#xa;    Date: Fri, 05 Dec 2025 13:06:12 GMT</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Linux 4.19 - 5.15" accuracy="97" line="70666">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="97"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.15 - 5.19" accuracy="91" line="70534">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.19" accuracy="91" line="70644">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.19</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.0 - 5.14" accuracy="91" line="71713">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:5</cpe></osclass>
+</osmatch>
+<osmatch name="OpenWrt 21.02 (Linux 5.4)" accuracy="91" line="72530">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:5.4</cpe></osclass>
+</osmatch>
+<osmatch name="MikroTik RouterOS 7.2 - 7.5 (Linux 5.6.3)" accuracy="91" line="91792">
+<osclass type="router" vendor="MikroTik" osfamily="RouterOS" osgen="7.X" accuracy="91"><cpe>cpe:/o:mikrotik:routeros:7</cpe></osclass>
+<osclass type="router" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:5.6.3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32" accuracy="90" line="57632">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:2.6.32</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.0 - 4.4" accuracy="90" line="70090">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.15" accuracy="90" line="70477">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:4.15</cpe></osclass>
+</osmatch>
+<osmatch name="IPFire 2.27 (Linux 5.15 - 6.1)" accuracy="90" line="43915">
+<osclass type="firewall" vendor="IPFire" osfamily="IPFire" osgen="2.X" accuracy="90"><cpe>cpe:/o:ipfire:ipfire:2.27</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:5.15</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="6.X" accuracy="90"><cpe>cpe:/o:linux:linux_kernel:6.1</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="866152" lastboot="Tue Nov 25 13:31:59 2025"/>
+<tcpsequence index="265" difficulty="Good luck!" values="ECBE660D,71B8BD0B,4B9D0B30,CC02C49A,73AEE671,70182979"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="339FC2D2,339FC335,339FC39A,339FC3FE,339FC462,339FC4C6"/>
+<hostscript><script id="smb2-time" output="Protocol negotiation failed (SMB2)"/></hostscript><times srtt="1641" rttvar="598" to="100000"/>
+</host>
+<runstats><finished time="1764940071" timestr="Fri Dec  5 14:07:51 2025" summary="Nmap done at Fri Dec  5 14:07:51 2025; 1 IP address (1 host up) scanned in 141.04 seconds" elapsed="141.04" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
