@@ -1,0 +1,29 @@
+# Configuration PingCastle Remote Execution
+# ==========================================
+
+target:
+  dc_ip: "10.0.10.50"              # IP du Domain Controller
+  dc_name: "SRV-AD"                     # Nom NetBIOS du DC
+  domain: "panoptis.lan"                 # Nom du domaine
+
+credentials:
+  username: "Administrateur"          # Compte admin
+  password: "Admin1234#"            # Mot de passe
+  # Possibilité d'utiliser un hash NTLM exemple ci dessous:
+  # ntlm_hash: "aad3b435b51404eeaad3b435b51404ee:8846f7eaee8fb117ad06bdd830b7586c"
+
+pingcastle:
+  local_path: "/home/panoptis/demo/projet-tutore/pingcastle/PingCastle.zip"  # Chemin local du ZIP
+  remote_path: "C:\\Temp\\PingCastle"             # Chemin sur le DC
+  options:
+    - "--healthcheck"                              # Options PingCastle
+    # - "--scanner aclcheck"
+    # - "--no-enum-limit"
+
+output:
+  local_results: "/home/panoptis/demo/projet-tutore/pingcastle/results"       # Dossier pour sauvegarder les résultats
+  cleanup: true                                    # Supprimer les fichiers sur le DC juste après
+
+execution:
+  method: "wmiexec"  # Options: psexec, wmiexec, smbexec, evil-winrm  (smbexec et evil-winrm en cours de dev)
+  timeout: 600       # Timeout en secondes (10 min par défaut)
