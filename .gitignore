@@ -19,6 +19,8 @@ ENV/
 .vscode/
 .idea/
 *.code-workspace
+*node_modules/
+.next
 
 # OS metadata
 .DS_Store
