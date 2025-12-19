@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import { Handle, Position } from 'reactflow'
-import { NetworkDevice } from '@/lib/network-data'
+import type { NetworkDevice } from '@/lib/domain-types'
 import { Server, Monitor, Shield, Network } from 'lucide-react'
 
 interface NetworkDeviceNodeProps {

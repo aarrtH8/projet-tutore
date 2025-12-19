@@ -39,6 +39,7 @@ Linux/lynis_security_dashboard.html
 
 # Network scanner outputs
 Network/scan_results_*/
+scan_results*/
 
 # PingCastle tool bundles and exports
 pingcastle/PingCastle.zip

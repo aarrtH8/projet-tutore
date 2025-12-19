@@ -13,7 +13,7 @@ credentials:
   # ntlm_hash: "aad3b435b51404eeaad3b435b51404ee:8846f7eaee8fb117ad06bdd830b7586c"
 
 pingcastle:
-  local_path: "/home/panoptis/demo/projet-tutore/pingcastle/PingCastle.zip"  # Chemin local du ZIP
+  local_path: "/home/panoptis/github_arthur/projet-tutore/pingcastle/PingCastle.zip"  # Chemin local du ZIP
   remote_path: "C:\\Temp\\PingCastle"             # Chemin sur le DC
   options:
     - "--healthcheck"                              # Options PingCastle
@@ -21,7 +21,7 @@ pingcastle:
     # - "--no-enum-limit"
 
 output:
-  local_results: "/home/panoptis/demo/projet-tutore/pingcastle/results"       # Dossier pour sauvegarder les résultats
+  local_results: "/home/panoptis/github_arthur/projet-tutore/pingcastle/results"       # Dossier pour sauvegarder les résultats
   cleanup: true                                    # Supprimer les fichiers sur le DC juste après
 
 execution:

@@ -47,6 +47,7 @@ class Config:
         self.topology_only: bool = False
         self.log_commands: bool = False
         self.command_log_file: str = 'nmap_commands.txt'
+        self.network_discovery: bool = True
         
         self._load_config()
     
@@ -80,6 +81,7 @@ class Config:
                 self.enable_topology = options.find('enable_topology').text.lower() == 'true' if options.find('enable_topology') is not None else False
                 self.topology_only = options.find('topology_only').text.lower() == 'true' if options.find('topology_only') is not None else False
                 self.log_commands = options.find('log_commands').text.lower() == 'true' if options.find('log_commands') is not None else False
+                self.network_discovery = options.find('network_discovery').text.lower() == 'true' if options.find('network_discovery') is not None else True
                 
                 cmd_log = options.find('command_log_file')
                 if cmd_log is not None and cmd_log.text:
@@ -203,54 +205,65 @@ class NetworkScanner:
         active_hosts.update(self.config.hosts)
         
         # Scanner les réseaux pour trouver les hôtes up
-        for network in self.config.networks:
-            print(f"\n{Colors.BLUE}═══════════════════════════════════════════════════{Colors.RESET}")
-            print(f"{Colors.BLUE}Découverte des hôtes sur {network}{Colors.RESET}")
-            print(f"{Colors.BLUE}═══════════════════════════════════════════════════{Colors.RESET}\n")
-            
-            output_file = os.path.join(self.output_dir, f"discovery_{network.replace('/', '_')}.txt")
-            
-            # Construction de la commande nmap pour la découverte
-            command = ['nmap', '-sn', network, '-oN', output_file]
-            
-            # Ajouter les exclusions si présentes
-            if self.config.exclude:
-                command.extend(['--exclude', ','.join(self.config.exclude)])
-            
-            returncode, stdout, stderr = self.run_command(
-                command,
-                f"Scan de découverte en cours..."
-            )
-            
-            if returncode != 0:
-                print(f"{Colors.RED}Erreur lors du scan de découverte sur {network}{Colors.RESET}")
-                continue
-            
-            # Parser le fichier de sortie pour extraire les IPs des hôtes up
-            try:
-                with open(output_file, 'r') as f:
-                    content = f.read()
-                    # Chercher les lignes "Nmap scan report for X.X.X.X"
-                    ip_pattern = r'Nmap scan report for (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})'
-                    found_ips = re.findall(ip_pattern, content)
-                    
-                    # Vérifier que l'hôte est "up" et pas down
-                    for ip in found_ips:
-                        # Chercher la section concernant cette IP
-                        ip_section = re.search(
-                            rf'Nmap scan report for {re.escape(ip)}.*?(?=Nmap scan report|$)',
-                            content,
-                            re.DOTALL
-                        )
-                        if ip_section and 'Host is up' in ip_section.group(0):
-                            active_hosts.add(ip)
-                    
-                    print(f"{Colors.GREEN}Trouvé {len(found_ips)} hôte(s) actif(s) sur {network}{Colors.RESET}")
-                    for ip in found_ips:
-                        print(f"  → {ip}")
+        is_root = hasattr(os, "geteuid") and os.geteuid() == 0
+
+        if not self.config.network_discovery or not self.config.networks:
+            if not self.config.network_discovery:
+                print(f"{Colors.YELLOW}Découverte réseau désactivée — seuls les hôtes déclarés seront utilisés.{Colors.RESET}")
+            elif not self.config.networks:
+                print(f"{Colors.YELLOW}Aucune plage réseau fournie — saut de la découverte automatique.{Colors.RESET}")
+        else:
+            for network in self.config.networks:
+                print(f"\n{Colors.BLUE}═══════════════════════════════════════════════════{Colors.RESET}")
+                print(f"{Colors.BLUE}Découverte des hôtes sur {network}{Colors.RESET}")
+                print(f"{Colors.BLUE}═══════════════════════════════════════════════════{Colors.RESET}\n")
+                
+                output_file = os.path.join(self.output_dir, f"discovery_{network.replace('/', '_')}.txt")
+                
+                # Construction de la commande nmap pour la découverte
+                command = ['nmap', '-sn', network, '-oN', output_file]
+                if not is_root:
+                    # Forcer Nmap à utiliser les sondes compatibles utilisateur non privilégié
+                    command.insert(1, '--unprivileged')
+                
+                # Ajouter les exclusions si présentes
+                if self.config.exclude:
+                    command.extend(['--exclude', ','.join(self.config.exclude)])
+                
+                returncode, stdout, stderr = self.run_command(
+                    command,
+                    f"Scan de découverte en cours..."
+                )
+                
+                if returncode != 0:
+                    print(f"{Colors.RED}Erreur lors du scan de découverte sur {network}{Colors.RESET}")
+                    continue
+                
+                # Parser le fichier de sortie pour extraire les IPs des hôtes up
+                try:
+                    with open(output_file, 'r') as f:
+                        content = f.read()
+                        # Chercher les lignes "Nmap scan report for X.X.X.X"
+                        ip_pattern = r'Nmap scan report for (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})'
+                        found_ips = re.findall(ip_pattern, content)
                         
-            except Exception as e:
-                print(f"{Colors.RED}Erreur lors de l'analyse des résultats: {e}{Colors.RESET}")
+                        # Vérifier que l'hôte est "up" et pas down
+                        for ip in found_ips:
+                            # Chercher la section concernant cette IP
+                            ip_section = re.search(
+                                rf'Nmap scan report for {re.escape(ip)}.*?(?=Nmap scan report|$)',
+                                content,
+                                re.DOTALL
+                            )
+                            if ip_section and 'Host is up' in ip_section.group(0):
+                                active_hosts.add(ip)
+                        
+                        print(f"{Colors.GREEN}Trouvé {len(found_ips)} hôte(s) actif(s) sur {network}{Colors.RESET}")
+                        for ip in found_ips:
+                            print(f"  → {ip}")
+                            
+                except Exception as e:
+                    print(f"{Colors.RED}Erreur lors de l'analyse des résultats: {e}{Colors.RESET}")
         
         # Filtrer les hôtes exclus
         for exclude in self.config.exclude:

@@ -2,11 +2,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { ScoreGauge } from '@/components/score-gauge'
 import { CategoryScoreCard } from '@/components/category-score-card'
 import { SeverityBadge } from '@/components/severity-badge'
-import { currentAudit, scoreEvolution } from '@/lib/mock-data'
 import { ScoreChart } from '@/components/score-chart'
 import { Shield, Server, Lock, Network, AlertCircle, TrendingUp, Calendar } from 'lucide-react'
+import { getCurrentAudit, getScoreEvolution } from '@/lib/scan-data'
 
 export default function DashboardPage() {
+  const currentAudit = getCurrentAudit()
+  const scoreEvolution = getScoreEvolution()
   const { overallScore, categoryScores, stats, date } = currentAudit
 
   const formatDate = (dateString: string) => {

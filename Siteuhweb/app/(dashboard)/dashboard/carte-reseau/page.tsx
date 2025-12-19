@@ -1,7 +1,16 @@
 import { NetworkMap } from '@/components/network-map'
-import { networkDevices, networkConnections } from '@/lib/network-data'
+import {
+  getNetworkDevices,
+  getNetworkConnections,
+  getNetworkMapHtml,
+} from '@/lib/scan-data'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function CarteReseauPage() {
+  const devices = getNetworkDevices()
+  const connections = getNetworkConnections()
+  const networkMapHtml = getNetworkMapHtml()
+
   return (
     <div className="p-4 lg:p-8 space-y-6">
       <div>
@@ -11,7 +20,28 @@ export default function CarteReseauPage() {
         </p>
       </div>
 
-      <NetworkMap devices={networkDevices} connections={networkConnections} />
+      <NetworkMap devices={devices} connections={connections} />
+
+      {networkMapHtml && (
+        <Card>
+          <CardHeader>
+            <CardTitle>Carte générée par le scanner</CardTitle>
+            <CardDescription>
+              Visualisation HTML issue du script d&apos;inventaire (vis.js)
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="w-full h-[600px] border border-border rounded-lg overflow-hidden bg-muted">
+              <iframe
+                title="Carte réseau générée"
+                srcDoc={networkMapHtml}
+                className="w-full h-full border-0 bg-card text-foreground"
+                sandbox="allow-same-origin allow-scripts"
+              />
+            </div>
+          </CardContent>
+        </Card>
+      )}
     </div>
   )
 }

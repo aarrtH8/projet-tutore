@@ -1,7 +1,10 @@
 import { AuditHistoryView } from '@/components/audit-history-view'
-import { auditHistory } from '@/lib/mock-data'
+import { getAuditHistory, getScoreEvolution } from '@/lib/scan-data'
 
 export default function HistoriquePage() {
+  const history = getAuditHistory()
+  const timeline = getScoreEvolution()
+
   return (
     <div className="p-4 lg:p-8 space-y-6">
       <div>
@@ -13,7 +16,7 @@ export default function HistoriquePage() {
         </p>
       </div>
 
-      <AuditHistoryView history={auditHistory} />
+      <AuditHistoryView history={history} timeline={timeline} />
     </div>
   )
 }

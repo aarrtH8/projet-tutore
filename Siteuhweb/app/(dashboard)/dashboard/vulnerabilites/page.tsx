@@ -1,7 +1,9 @@
 import { VulnerabilitiesTable } from '@/components/vulnerabilities-table'
-import { currentAudit } from '@/lib/mock-data'
+import { getCurrentAudit } from '@/lib/scan-data'
 
 export default function VulnerabilitiesPage() {
+  const audit = getCurrentAudit()
+
   return (
     <div className="p-4 lg:p-8 space-y-6">
       <div>
@@ -11,7 +13,7 @@ export default function VulnerabilitiesPage() {
         </p>
       </div>
 
-      <VulnerabilitiesTable vulnerabilities={currentAudit.vulnerabilities} />
+      <VulnerabilitiesTable vulnerabilities={audit.vulnerabilities} />
     </div>
   )
 }

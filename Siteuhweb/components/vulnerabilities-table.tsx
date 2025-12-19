@@ -6,7 +6,7 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { SeverityBadge } from '@/components/severity-badge'
-import { Vulnerability } from '@/lib/mock-data'
+import type { Vulnerability } from '@/lib/domain-types'
 import { Download, Search, ArrowUpDown } from 'lucide-react'
 import {
   Table,

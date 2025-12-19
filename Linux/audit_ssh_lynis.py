@@ -6,10 +6,12 @@ import re
 LYNIS_PATH = "lynis"  # dossier local contenant lynis
 REMOTE_PATH = "/tmp/lynis"  # dossier temporaire sur la machine distante
 
+
 def strip_ansi_codes(text):
     """Remove ANSI color codes from text"""
     ansi_escape = re.compile(r'\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])')
     return ansi_escape.sub('', text)
+
 
 def read_credentials(file_path="ssh_credentials.txt"):
     if not os.path.exists(file_path):
@@ -19,13 +21,19 @@ def read_credentials(file_path="ssh_credentials.txt"):
         lines = f.readlines()
         credentials = []
         for line in lines:
-            parts = line.strip().split(";")
-            if len(parts) == 3:
-                credentials.append({
+            stripped = line.strip()
+            if not stripped or stripped.startswith("#"):
+                continue
+            parts = stripped.split(";")
+            if len(parts) >= 3:
+                entry = {
                     "host": parts[0],
                     "username": parts[1],
-                    "password": parts[2]
-                })
+                    "password": parts[2],
+                }
+                if len(parts) >= 4 and parts[3].isdigit():
+                    entry["port"] = int(parts[3])
+                credentials.append(entry)
         return credentials
 
 def check_lynis_folder():
@@ -106,13 +114,14 @@ def audit_machine(creds):
     host = creds["host"]
     username = creds["username"]
     password = creds["password"]
+    port = creds.get("port", 22)
 
-    print(f"\nConnexion à {host} ...")
+    print(f"\nConnexion à {host} (port {port}) ...")
 
     try:
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-        ssh.connect(hostname=host, username=username, password=password, timeout=5)
+        ssh.connect(hostname=host, username=username, password=password, port=port, timeout=5)
 
         sftp = ssh.open_sftp()
         print("Transfert de Lynis ...")

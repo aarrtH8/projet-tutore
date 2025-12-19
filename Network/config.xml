@@ -1,62 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-    <!-- Réseaux à scanner (notation CIDR) -->
     <networks>
         <network>10.0.10.0/24</network>
     </networks>
-
-    <!-- Hôtes individuels à scanner -->
     <hosts>
-        <!-- <host>10.0.10.111</host> -->
-        <!-- <host>192.168.1.200</host> -->
+        <host>10.0.10.100</host>
+        <host>10.0.10.54</host>
+        <host>10.0.10.1</host>
     </hosts>
-
-    <!-- Exclusions (IPs individuelles ou plages) -->
-    <exclude>
-        <!-- <entry>192.168.1.1</entry> -->
-        <!-- <entry>192.168.1.10-20</entry> -->
-    </exclude>
-
-    <!-- Options de scan -->
     <options>
-        <!-- Outils additionnels (exécutés conditionnellement) -->
-        <search_exploits>false</search_exploits>       <!-- searchsploit (nécessite exploit-db) -->
-        <samba>true</samba>                            <!-- enum4linux si ports 139/445 -->
-        <whatweb>true</whatweb>                        <!-- whatweb sur ports HTTP détectés -->
-
-        <!-- Topologie réseau -->
-        <enable_topology>true</enable_topology>       <!-- Nécessite networkx + traceroute -->
-        <topology_only>false</topology_only>           <!-- True = découverte basique + topologie uniquement -->
-
-        <!-- Logs -->
+        <network_discovery>false</network_discovery>
+        <search_exploits>true</search_exploits>
+        <samba>true</samba>
+        <whatweb>true</whatweb>
+        <enable_topology>true</enable_topology>
+        <topology_only>false</topology_only>
         <log_commands>true</log_commands>
         <command_log_file>nmap_commands.txt</command_log_file>
     </options>
-
-    <!-- Options de performance -->
     <performance>
-        <!-- Timing Nmap: T0 (paranoïaque), T1 (sournois), T2 (poli), T3 (normal), T4 (agressif), T5 (insensé) -->
-        <!-- Recommandé: T4 pour rapidité ou T3 pour équilibre -->
         <timing>T4</timing>
-        
-        <!-- Nombre de threads pour scanner plusieurs hôtes en parallèle (1-50) -->
-        <!-- Recommandé: 5-10 pour réseaux moyens, 1 pour réseaux lents -->
         <max_threads>10</max_threads>
-        
-        <!-- Scanner tous les ports (1-65535) ou seulement les top ports -->
-        <!-- false = plus rapide, true = plus complet -->
         <scan_all_ports>false</scan_all_ports>
-        
-        <!-- Nombre de top ports à scanner si scan_all_ports=false (100-10000) -->
-        <!-- 1000 = équilibre, 100 = rapide, 10000 = très complet -->
         <top_ports>1000</top_ports>
-        
-        <!-- Taux minimum de paquets/seconde (0 = désactivé, 100-10000 recommandé) -->
-        <!-- Plus élevé = plus rapide mais plus agressif -->
         <min_rate>1000</min_rate>
-        
-        <!-- Timeout par hôte (format: 30m, 1h, etc.) -->
-        <host_timeout>30m</host_timeout>
-        
+        <host_timeout>1m</host_timeout>
     </performance>
 </config>
