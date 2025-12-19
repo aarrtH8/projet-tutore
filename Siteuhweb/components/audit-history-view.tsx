@@ -3,10 +3,9 @@
 import { useState } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { ScoreGauge } from '@/components/score-gauge'
-import { AuditHistory, AuditData } from '@/lib/mock-data'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { TrendingUp, TrendingDown, Minus, BarChart3 } from 'lucide-react'
+import { TrendingUp, TrendingDown, Minus } from 'lucide-react'
 import { Checkbox } from '@/components/ui/checkbox'
 import {
   Dialog,
@@ -17,13 +16,14 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog'
 import { ScoreChart } from '@/components/score-chart'
-import { scoreEvolution } from '@/lib/mock-data'
+import type { AuditHistory, AuditData, ScorePoint } from '@/lib/domain-types'
 
 interface AuditHistoryViewProps {
   history: AuditHistory
+  timeline: ScorePoint[]
 }
 
-export function AuditHistoryView({ history }: AuditHistoryViewProps) {
+export function AuditHistoryView({ history, timeline }: AuditHistoryViewProps) {
   const [selectedAudits, setSelectedAudits] = useState<string[]>([])
 
   const toggleAuditSelection = (id: string) => {
@@ -80,7 +80,7 @@ export function AuditHistoryView({ history }: AuditHistoryViewProps) {
           <CardDescription>Évolution du score de sécurité sur tous les audits</CardDescription>
         </CardHeader>
         <CardContent>
-          <ScoreChart data={scoreEvolution} />
+          <ScoreChart data={timeline} />
         </CardContent>
       </Card>
 

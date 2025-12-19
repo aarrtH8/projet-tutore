@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { SeverityBadge } from '@/components/severity-badge'
-import { RemediationTask } from '@/lib/mock-data'
+import type { RemediationTask } from '@/lib/domain-types'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { CalendarDays, Clock } from 'lucide-react'

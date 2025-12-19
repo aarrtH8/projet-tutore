@@ -13,7 +13,7 @@ import ReactFlow, {
 } from 'reactflow'
 import 'reactflow/dist/style.css'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { NetworkDevice } from '@/lib/network-data'
+import type { NetworkDevice } from '@/lib/domain-types'
 import { Button } from '@/components/ui/button'
 import { Download, X } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'

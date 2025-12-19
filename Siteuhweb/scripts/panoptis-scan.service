@@ -1,0 +1,15 @@
+[Unit]
+Description=Panoptis privileged scan service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/home/panoptis/github_arthur/projet-tutore
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/node /home/panoptis/github_arthur/projet-tutore/Siteuhweb/scripts/privileged-scan-service.js
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
